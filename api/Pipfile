@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+flask-graphql = "*"
+postgres = "*"
+waitress = "*"
+flask-bcrypt = "*"
+graphene = "*"
+graphql-core = "*"
+flask-script = "*"
+pytest = "*"
+pyjwt = "*"
+azure-cosmos = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+test = "pytest"
+server = "python app.py"
+
+[pipenv]
+allow_prereleases = false
