@@ -5,8 +5,14 @@ from data.azure_connection import fetch_reports
 
 def resolve_report_query(self, info, **kwargs):
     domain = kwargs.get('domain')
+    start_date = kwargs.get('start_date')
+    end_date = kwargs.get('end_date')
 
-    report_list = fetch_reports(domain=domain)
+    report_list = fetch_reports(
+        domain=domain,
+        start_date=start_date,
+        end_date=end_date
+    )
 
     rtr_list = []
     for report in report_list:

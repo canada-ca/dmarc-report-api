@@ -12,7 +12,9 @@ class Query(graphene.ObjectType):
 
     dmarc_report = graphene.List(
         lambda: ReportQuery,
-        domain=graphene.Argument(URL)
+        domain=graphene.Argument(URL),
+        start_date=graphene.Argument(graphene.String),
+        end_date=graphene.Argument(graphene.String)
     )
 
     def resolve_dmarc_report(self, info, **kwargs):
