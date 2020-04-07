@@ -23,7 +23,9 @@ def fetch_reports(domain):
         'SELECT * FROM c WHERE c.header_from="' + domain + '"',
         {'enableCrossPartitionQuery': True}
     )
-    return reports
 
+    rtr_list = []
+    for item in reports:
+        rtr_list.append(item)
 
-
+    return rtr_list

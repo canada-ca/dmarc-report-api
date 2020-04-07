@@ -1,17 +1,14 @@
 import graphene
 from graphene import relay
 
-from dmarc_report_api.scalars import URL, EmailAddress
+from scalars import URL, EmailAddress
 
 
 class ReportQuery(graphene.ObjectType):
     """
     Returns a DMARC report from Azure cosmos based on a domain
     """
-    class Meta:
-        interfaces = (relay.Node)
 
-    id = graphene.ID()
     report_xml_schema = graphene.String(
         description="Report XML schema version.",
         required=True
@@ -20,11 +17,11 @@ class ReportQuery(graphene.ObjectType):
         description="Organization the dmarc report belongs to.",
         required=True
     )
-    report_org_email = EmailAddress(
+    report_org_email = graphene.String(
         description="Organization email address.",
         required=True
     )
-    report_org_contact_info = EmailAddress(
+    report_org_contact_info = graphene.String(
         description="Organizations contact email address.",
         required=True
     )
@@ -80,11 +77,11 @@ class ReportQuery(graphene.ObjectType):
         description="The country which the IP is located in.",
         required=True
     )
-    source_ip_hostname = URL(
+    source_ip_hostname = graphene.String(
         description="Hostname for the source IP.",
         required=True
     )
-    source_ip_domain = URL(
+    source_ip_domain = graphene.String(
         description="The domain for the source IP.",
         required=True
     )
@@ -116,19 +113,19 @@ class ReportQuery(graphene.ObjectType):
         description="Policy override comments.",
         required=True
     )
-    envelope_from = URL(
+    envelope_from = graphene.String(
         description="SPF domain used to check alignment.",
         required=True
     )
-    header_from = URL(
+    header_from = graphene.String(
         description="The domain DMARC uses to check alignment with SPF/DKIM",
         required=True
     )
-    envelope_to = URL(
+    envelope_to = graphene.String(
         description='"Envelope Recipient" in the email header.',
         required=True
     )
-    dkim_domains = URL(
+    dkim_domains = graphene.String(
         description="DKIM domains.",
         required=True
     )
@@ -140,7 +137,7 @@ class ReportQuery(graphene.ObjectType):
         description="DKIM results.",
         required=True
     )
-    spf_domains = URL(
+    spf_domains = graphene.String(
         description="SPF domains.",
         required=True
     )
@@ -152,16 +149,3 @@ class ReportQuery(graphene.ObjectType):
         description="SPF results.",
         required=True
     )
-    index_id = graphene.String(
-        description="Index ID.",
-        required=True
-    )
-
-    @classmethod
-    def get_node(cls, info, id):
-        return get_report(id)
-
-
-class ReportQueryConnection(relay.Connection):
-    class Meta:
-        node = ReportQuery
