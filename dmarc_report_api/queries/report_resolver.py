@@ -9,7 +9,6 @@ def resolve_report_query(self, info, **kwargs):
     report_list = fetch_reports(domain=domain)
 
     rtr_list = []
-    counter = 1
     for report in report_list:
         rtr_list.append(
             ReportQuery(
@@ -50,6 +49,5 @@ def resolve_report_query(self, info, **kwargs):
                 report['spf_results']
             )
         )
-        counter += 1
 
     return rtr_list
