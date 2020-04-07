@@ -57,7 +57,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+dmarc_report_api/.env
 
 # next.js build output
 .next
@@ -70,3 +70,6 @@ vendor
 # local Jekyll files
 _site
 .jekyll-metadata
+
+# IDE Files
+.idea/
