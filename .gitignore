@@ -57,7 +57,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-api/.env
+dmarc_report_api/.env
 
 # next.js build output
 .next
