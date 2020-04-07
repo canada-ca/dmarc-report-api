@@ -24,6 +24,7 @@ python_version = "3.8"
 [scripts]
 test = "pytest"
 server = "python app.py"
+azure_test = "python data/azure_connection.py"
 
 [pipenv]
 allow_prereleases = false
