@@ -4,8 +4,10 @@ from graphql import GraphQLError
 
 from queries.report_query import ReportQuery
 from data import fetch_reports
+from auth import require_token
 
 
+@require_token
 def resolve_report_query(self, info, **kwargs):
     domain = kwargs.get('domain', None)
     start_date = kwargs.get('start_date', None)
