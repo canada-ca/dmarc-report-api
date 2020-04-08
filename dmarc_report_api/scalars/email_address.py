@@ -43,7 +43,7 @@ class EmailAddress(Scalar):
     def parse_literal(node):
         if not isinstance(node, ast.StringValue):
             raise GraphQLError(
-                "Can only validate strings as email address's but got a : " + str(ast.Type)
+                "Can only validate strings as email address's but got a : " + str(type(node))
             )
 
         if not EMAIL_ADDRESS_REGEX.search(node.value.lower()):

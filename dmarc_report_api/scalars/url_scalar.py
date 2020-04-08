@@ -17,20 +17,20 @@ class URL(Scalar):
     @staticmethod
     def serialize(value):
         if not isinstance(value, str):
-            raise GraphQLError("Value is not a valid String :" + str(value))
+            raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not URL_REGEX_CHECK.search(value):
-            raise GraphQLError("Value is not a valid URL :" + str(value))
+            raise GraphQLError("Value is not a valid URL : " + str(value))
 
         return value
 
     @staticmethod
     def parse_value(value):
         if not isinstance(value, str):
-            raise GraphQLError("Value is not a valid String :" + str(value))
+            raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not URL_REGEX_CHECK.search(value):
-            raise GraphQLError("Value is not a valid URL :" + str(value))
+            raise GraphQLError("Value is not a valid URL : " + str(value))
 
         return value
 
@@ -38,10 +38,10 @@ class URL(Scalar):
     def parse_literal(node):
         if not isinstance(node, ast.StringValue):
             raise GraphQLError(
-                "Can only validate strings as URL's but got a : " + str(ast.Type)
+                "Can only validate strings as URL's but got a : " + str(type(node))
             )
 
         if not URL_REGEX_CHECK.search(node.value):
-            raise GraphQLError("Value is not a valid URL :" + str(node.value))
+            raise GraphQLError("Value is not a valid URL : " + str(node.value))
 
         return node.value
