@@ -1,10 +1,6 @@
 import os
-import json
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.errors as errors
-import azure.cosmos.http_constants as http_constants
-
-import azure.cosmos.database
 
 from graphql import GraphQLError
 

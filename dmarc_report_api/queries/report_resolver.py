@@ -1,6 +1,6 @@
 import datetime
 from queries.report_query import ReportQuery
-from data.azure_connection import fetch_reports
+from data import fetch_reports
 
 
 def resolve_report_query(self, info, **kwargs):

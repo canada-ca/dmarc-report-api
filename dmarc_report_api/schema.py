@@ -2,8 +2,7 @@ import graphene
 
 from graphene import relay
 
-from queries.report_query import ReportQuery
-from queries.report_resolver import resolve_report_query
+from queries import ReportQuery, resolve_report_query
 from scalars.url_scalar import URL
 
 
@@ -12,9 +11,21 @@ class Query(graphene.ObjectType):
 
     dmarc_report = graphene.List(
         lambda: ReportQuery,
-        domain=graphene.Argument(URL),
-        start_date=graphene.Argument(graphene.String),
-        end_date=graphene.Argument(graphene.String)
+        domain=graphene.Argument(
+            URL,
+            description="Domain used to select reports",
+            required=True
+        ),
+        start_date=graphene.Argument(
+            graphene.String,
+            description="Set the start date in a date range select.",
+            required=False
+        ),
+        end_date=graphene.Argument(
+            graphene.String,
+            description="Set the end date in a date range select.",
+            required=False
+        )
     )
 
     def resolve_dmarc_report(self, info, **kwargs):

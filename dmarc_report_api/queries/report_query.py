@@ -1,5 +1,4 @@
 import graphene
-from graphene import relay
 
 from scalars import URL, EmailAddress
 
@@ -17,7 +16,7 @@ class ReportQuery(graphene.ObjectType):
         description="Organization the dmarc report belongs to.",
         required=True
     )
-    report_org_email = graphene.String(
+    report_org_email = EmailAddress(
         description="Organization email address.",
         required=True
     )
