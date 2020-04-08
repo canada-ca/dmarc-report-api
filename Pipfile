@@ -23,7 +23,7 @@ python_version = "3.8"
 
 [scripts]
 test = "pytest"
-server = "python app.py"
+server = "python dmarc_report_api/app.py"
 
 [pipenv]
 allow_prereleases = false
