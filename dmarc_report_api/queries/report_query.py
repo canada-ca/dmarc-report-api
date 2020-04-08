@@ -13,7 +13,7 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     report_org_name = graphene.String(
-        description="Organization the dmarc report belongs to.",
+        description="Organization that produced the report.",
         required=True
     )
     report_org_email = EmailAddress(
@@ -41,15 +41,15 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     report_domain = URL(
-        description="The domain the report was created from.",
+        description="The domain at which the DMARC record was found.",
         required=True
     )
     policy_adkim = graphene.String(
-        description="DKIM policy on reported domain.",
+        description="DKIM alignment mode on reported domain.",
         required=True
     )
     policy_aspf = graphene.String(
-        description="SPF policy on reported domain.",
+        description="SPF alignment mode on reported domain.",
         required=True
     )
     policy_domain = graphene.String(
@@ -61,15 +61,15 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     policy_percent = graphene.String(
-        description="DMARC rejection percentage.",
+        description="DMARC percentage policy.",
         required=True
     )
     policy_forensic = graphene.String(
-        description="DMARC forensic policy percentage.",
+        description="DMARC forensic policy.",
         required=True
     )
     source_ip_address = graphene.String(
-        description="The source IP which the report was created from.",
+        description="The IP address from which messages were received.",
         required=True
     )
     source_ip_country = graphene.String(
@@ -85,7 +85,7 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     message_count = graphene.Int(
-        description="Amount of emails sent with the DMARC record.",
+        description="Count of emails received.",
         required=True
     )
     spf_aligned = graphene.Boolean(
@@ -101,11 +101,11 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     disposition = graphene.String(
-        description="Unknown",
+        description="The DMARC policy applied by the receiver",
         required=True
     )
     policy_override_reasons = graphene.String(
-        description="Policy override reasons.",
+        description="Reasons why the receiver applied a specific policy.",
         required=True
     )
     policy_override_comments = graphene.String(
@@ -113,38 +113,38 @@ class ReportQuery(graphene.ObjectType):
         required=True
     )
     envelope_from = graphene.String(
-        description="SPF domain used to check alignment.",
+        description="Domain used in the SMTP MAIL FROM field.",
         required=True
     )
     header_from = graphene.String(
-        description="The domain DMARC uses to check alignment with SPF/DKIM",
+        description="Domain used in the FROM header",
         required=True
     )
     envelope_to = graphene.String(
-        description='"Envelope Recipient" in the email header.',
+        description="Domain used in the SMTP RCPT TO field",
         required=True
     )
     dkim_domains = graphene.String(
-        description="DKIM domains.",
+        description="Domains used in DKIM headers",
         required=True
     )
     dkim_selectors = graphene.String(
-        description="DKIM selectors.",
+        description="Selectors used in DKIM headers",
         required=True
     )
     dkim_results = graphene.String(
-        description="DKIM results.",
+        description="Results of DKIM validation",
         required=True
     )
     spf_domains = graphene.String(
-        description="SPF domains.",
+        description="Domains used in SPF validation",
         required=True
     )
     spf_scopes = graphene.String(
-        description="SPF scopes.",
+        description="Sources of SPF domains",
         required=True
     )
     spf_results = graphene.String(
-        description="SPF results.",
+        description="Results of SPF validation",
         required=True
     )
