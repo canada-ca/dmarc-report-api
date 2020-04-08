@@ -1,12 +1,24 @@
 import datetime
+
+from graphql import GraphQLError
+
 from queries.report_query import ReportQuery
 from data import fetch_reports
 
 
 def resolve_report_query(self, info, **kwargs):
-    domain = kwargs.get('domain')
-    start_date = kwargs.get('start_date')
-    end_date = kwargs.get('end_date')
+    domain = kwargs.get('domain', None)
+    start_date = kwargs.get('start_date', None)
+    end_date = kwargs.get('end_date', None)
+
+    if domain is None:
+        raise GraphQLError("Error, domain was not supplied")
+
+    if (start_date is not None and end_date is None) or \
+        (start_date is None and end_date is not None):
+        raise GraphQLError(
+            "Error, only one date was supplied need two for date range select"
+        )
 
     report_list = fetch_reports(
         domain=domain,
