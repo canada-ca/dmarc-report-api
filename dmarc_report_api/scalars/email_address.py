@@ -24,24 +24,20 @@ class EmailAddress(Scalar):
         if not isinstance(value, str):
             raise GraphQLError("Value is not a valid String :" + str(value))
 
-        value.islower()
+        if not EMAIL_ADDRESS_REGEX.search(value.lower()):
+            raise GraphQLError("Value is not a valid email address :" + str(value.lower()))
 
-        if not EMAIL_ADDRESS_REGEX.search(value):
-            raise GraphQLError("Value is not a valid email address :" + str(value))
-
-        return value
+        return value.lower()
 
     @staticmethod
     def parse_value(value):
         if not isinstance(value, str):
             raise GraphQLError("Value is not a valid String :" + str(value))
 
-        value.islower()
+        if not EMAIL_ADDRESS_REGEX.search(value.lower()):
+            raise GraphQLError("Value is not a valid email address :" + str(value.lower()))
 
-        if not EMAIL_ADDRESS_REGEX.search(value):
-            raise GraphQLError("Value is not a valid email address :" + str(value))
-
-        return value
+        return value.lower()
 
     @staticmethod
     def parse_literal(node):
@@ -50,9 +46,7 @@ class EmailAddress(Scalar):
                 "Can only validate strings as email address's but got a : " + str(ast.Type)
             )
 
-        node.value.islower()
+        if not EMAIL_ADDRESS_REGEX.search(node.value.lower()):
+            raise GraphQLError("Value is not a valid email address :" + str(node.value.lower()))
 
-        if not EMAIL_ADDRESS_REGEX.search(node.value):
-            raise GraphQLError("Value is not a valid email address :" + str(node.value))
-
-        return node.value
+        return node.value.lower()
