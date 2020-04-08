@@ -1,13 +1,28 @@
-[![Build Status](https://travis-ci.org/canada-ca/template-gabarit.svg?branch=master)](https://travis-ci.org/canada-ca/template-gabarit)
-
 ([Français](#gabarit-pour-dépôts-de-code-source-ouvert-du-gouvernement-du-canada))
 
-## Template for Government of Canada open source code repositories
+## DMARC Report API
+This is a single query GraphQL API allowing us to pull data from an Azure Cosmos Database with [Tracker](https://github.com/canada-ca/tracker)
 
-- What is this project?
-- How does it work?
-- Who will use this project?
-- What is the goal of this project?
+### Running The API
+#### Requirements
+- Python 3.8+
+- Pipenv
+
+#### Setup Pipenv
+```shell script
+pipenv install
+```
+
+#### Running the API
+```shell script
+pipenv run server
+```
+You will be able to access the API at http://localhost:5000/graphql
+
+#### Running Tests
+```shell script
+pipenv run test
+```
 
 ### How to Contribute
 
@@ -21,12 +36,30 @@ The Canada wordmark and related graphics associated with this distribution are p
 
 ______________________
 
-## Gabarit pour dépôts de code source ouvert du gouvernement du Canada
+## API de rapport DMARC
 
-- Quel est ce projet?
-- Comment ça marche?
-- Qui utilisera ce projet?
-- Quel est le but de ce projet?
+Il s'agit d'une API GraphQL à requête unique qui nous permet d'extraire des données d'une base de données Azure Cosmos avec [Tracker](https://github.com/canada-ca/tracker)
+
+### Exécution de l'API
+#### Exigences
+- Python 3.8+
+- Pipenv
+
+#### Configurer Pipenv
+```shell script
+pipenv install
+```
+
+#### Exécution de l'API
+```shell script
+pipenv run server
+```
+Vous pourrez accéder à l'API à l'adresse http://localhost:5000/graphql
+
+#### Exécution de Tests
+```shell script
+pipenv run test
+```
 
 ### Comment contribuer
 
