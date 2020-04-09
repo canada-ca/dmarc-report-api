@@ -21,7 +21,7 @@ def fetch_reports(domain, start_date, end_date):
     try:
         reports = client.QueryItems(
             "dbs/" + DATABASE_NAME + "/colls/" + CONTAINER_NAME,
-            '''SELECT * FROM c WHERE c.header_from='{domain}' AND c.report_end_date > '{start_date}' AND c.report_end_date < '{end_date}' ORDER BY c.report_begin_date ASC'''.format(
+            '''SELECT * FROM c WHERE c.header_from='{domain}' AND c.report_end_date > '{start_date}' AND c.report_end_date < '{end_date}' ORDER BY c.report_end_date ASC'''.format(
                 domain=domain,
                 start_date=str(start_date),
                 end_date=str(end_date)
