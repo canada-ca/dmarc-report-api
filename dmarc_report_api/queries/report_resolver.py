@@ -22,6 +22,9 @@ def resolve_report_query(self, info, **kwargs):
             "Error, only one date was supplied need two for date range select"
         )
 
+    if start_date > end_date:
+        raise GraphQLError('Error, start date cannot be greater then end date')
+
     report_list = fetch_reports(
         domain=domain,
         start_date=start_date,

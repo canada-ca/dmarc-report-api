@@ -22,20 +22,20 @@ class EmailAddress(Scalar):
     @staticmethod
     def serialize(value):
         if not isinstance(value, str):
-            raise GraphQLError("Value is not a valid String :" + str(value))
+            raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not EMAIL_ADDRESS_REGEX.search(value.lower()):
-            raise GraphQLError("Value is not a valid email address :" + str(value.lower()))
+            raise GraphQLError("Value is not a valid email address : " + str(value.lower()))
 
         return value.lower()
 
     @staticmethod
     def parse_value(value):
         if not isinstance(value, str):
-            raise GraphQLError("Value is not a valid String :" + str(value))
+            raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not EMAIL_ADDRESS_REGEX.search(value.lower()):
-            raise GraphQLError("Value is not a valid email address :" + str(value.lower()))
+            raise GraphQLError("Value is not a valid email address : " + str(value.lower()))
 
         return value.lower()
 
@@ -47,6 +47,6 @@ class EmailAddress(Scalar):
             )
 
         if not EMAIL_ADDRESS_REGEX.search(node.value.lower()):
-            raise GraphQLError("Value is not a valid email address :" + str(node.value.lower()))
+            raise GraphQLError("Value is not a valid email address : " + str(node.value.lower()))
 
         return node.value.lower()
