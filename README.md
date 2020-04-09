@@ -1,4 +1,4 @@
-([Français](#gabarit-pour-dépôts-de-code-source-ouvert-du-gouvernement-du-canada))
+([Français](#API de rapport DMARC))
 
 ## DMARC Report API
 This is a single query GraphQL API allowing us to pull data from an Azure Cosmos Database with [Tracker](https://github.com/canada-ca/tracker)
