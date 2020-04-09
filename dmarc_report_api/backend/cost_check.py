@@ -10,12 +10,12 @@ from graphql.language.ast import (
     Field,
     InlineFragment
 )
-from backend import (
+from dmarc_report_api.backend import (
     get_fragments,
     get_queries_and_mutations
 )
 
-from backend.cost_map import cost_map
+from dmarc_report_api.backend.cost_map import cost_map
 
 
 class CostLimitReached(Exception):

@@ -1,17 +1,8 @@
-import sys
-import os
-import pytest
-
-from os.path import dirname, join, expanduser, normpath, realpath
 from graphql import GraphQLError
 from graphql.language import ast
 from unittest import TestCase
 
-PACKAGE_PARENT = '../../dmarc_report_api'
-SCRIPT_DIR = dirname(realpath(join(os.getcwd(), expanduser(__file__))))
-sys.path.append(normpath(join(SCRIPT_DIR, PACKAGE_PARENT)))
-
-from scalars import EmailAddress
+from dmarc_report_api.scalars import EmailAddress
 
 
 class TestEmailAddressSerialize(TestCase):

@@ -7,8 +7,8 @@ from graphql import GraphQLDocument, GraphQLSchema
 from graphql.backend.core import GraphQLCoreBackend
 from graphql.language.ast import Document
 
-from backend.depth_check import check_max_depth
-from backend.cost_check import check_cost_analysis
+from dmarc_report_api.backend.depth_check import check_max_depth
+from dmarc_report_api.backend.cost_check import check_cost_analysis
 
 
 class SecurityAnalysisBackend(GraphQLCoreBackend):
