@@ -2,8 +2,8 @@ from flask import Flask
 from flask_graphql import GraphQLView
 from waitress import serve
 
-from backend.security_check import SecurityAnalysisBackend
-from schema import schema
+from dmarc_report_api.backend.security_check import SecurityAnalysisBackend
+from dmarc_report_api.schema import schema
 
 app = Flask(__name__)
 

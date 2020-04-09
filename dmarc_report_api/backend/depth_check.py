@@ -9,7 +9,7 @@ from graphql.language.ast import (
     InlineFragment
 )
 
-from backend import (
+from dmarc_report_api.backend import (
     get_fragments,
     get_queries_and_mutations
 )

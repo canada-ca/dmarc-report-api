@@ -1,6 +1,6 @@
 import graphene
 
-from scalars import URL, EmailAddress
+from dmarc_report_api.scalars import URL, EmailAddress
 
 
 class ReportQuery(graphene.ObjectType):

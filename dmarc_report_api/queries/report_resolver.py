@@ -2,9 +2,9 @@ import datetime
 
 from graphql import GraphQLError
 
-from queries.report_query import ReportQuery
-from data import fetch_reports
-from auth import require_token
+from dmarc_report_api.queries.report_query import ReportQuery
+from dmarc_report_api.data import fetch_reports
+from dmarc_report_api.auth import require_token
 
 
 @require_token
