@@ -4,13 +4,13 @@ import azure.cosmos.errors as errors
 
 from graphql import GraphQLError
 
-AZURE_ENDPOINT = os.getenv('AZURE_ENDPOINT')
-AZURE_KEY = os.getenv('AZURE_KEY')
-DATABASE_NAME = os.getenv('DATABASE')
-CONTAINER_NAME = os.getenv('CONTAINER')
+AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
+AZURE_KEY = os.getenv("AZURE_KEY")
+DATABASE_NAME = os.getenv("DATABASE")
+CONTAINER_NAME = os.getenv("CONTAINER")
 
 try:
-    client = cosmos_client.CosmosClient(AZURE_ENDPOINT, {'masterKey': AZURE_KEY})
+    client = cosmos_client.CosmosClient(AZURE_ENDPOINT, {"masterKey": AZURE_KEY})
 except errors.HTTPFailure as e:
     raise GraphQLError("Cosmos HTTP Error: " + str(e))
 
@@ -19,12 +19,10 @@ def fetch_reports(domain, start_date, end_date):
     try:
         reports = client.QueryItems(
             "dbs/" + DATABASE_NAME + "/colls/" + CONTAINER_NAME,
-            '''SELECT * FROM c WHERE c.header_from='{domain}' AND c.report_end_date > '{start_date}' AND c.report_end_date < '{end_date}' ORDER BY c.report_end_date ASC'''.format(
-                domain=domain,
-                start_date=str(start_date),
-                end_date=str(end_date)
+            """SELECT * FROM c WHERE c.header_from='{domain}' AND c.report_end_date > '{start_date}' AND c.report_end_date < '{end_date}' ORDER BY c.report_end_date ASC""".format(
+                domain=domain, start_date=str(start_date), end_date=str(end_date)
             ),
-            {'enableCrossPartitionQuery': True}
+            {"enableCrossPartitionQuery": True},
         )
         rtr_list = []
         for item in reports:

@@ -12,20 +12,18 @@ class Query(graphene.ObjectType):
     dmarc_summary = graphene.Field(
         lambda: DmarcSummaries,
         domain=graphene.Argument(
-            URL,
-            description="Domain used to select reports",
-            required=True
+            URL, description="Domain used to select reports", required=True
         ),
         start_date=graphene.Argument(
             graphene.String,
             description="Set the start date in a date range select.",
-            required=False
+            required=False,
         ),
         end_date=graphene.Argument(
             graphene.String,
             description="Set the end date in a date range select.",
-            required=False
-        )
+            required=False,
+        ),
     )
 
     def resolve_dmarc_summary(self, info, **kwargs):

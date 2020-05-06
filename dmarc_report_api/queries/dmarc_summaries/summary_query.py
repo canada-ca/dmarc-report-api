@@ -9,11 +9,6 @@ class DmarcSummaries(graphene.ObjectType):
     """
 
     """
-    top_senders = graphene.Field(
-        lambda: TopSenders,
-        description=""
-    )
-    category_totals = graphene.Field(
-        lambda: CategoryTotals,
-        description=""
-    )
+
+    top_senders = graphene.Field(lambda: TopSenders, description="")
+    category_totals = graphene.Field(lambda: CategoryTotals, description="")

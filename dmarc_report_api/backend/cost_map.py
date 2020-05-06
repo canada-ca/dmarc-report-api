@@ -1,3 +1,1 @@
-cost_map = {
-
-}
+cost_map = {}

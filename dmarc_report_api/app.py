@@ -12,14 +12,11 @@ backend = SecurityAnalysisBackend(max_depth=20, max_cost=1000)
 
 
 app.add_url_rule(
-    '/graphql',
+    "/graphql",
     view_func=GraphQLView.as_view(
-        'graphql',
-        schema=schema,
-        backend=backend,
-        graphiql=True
-    )
+        "graphql", schema=schema, backend=backend, graphiql=True
+    ),
 )
 
-if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    serve(app, host="0.0.0.0", port=5000)
