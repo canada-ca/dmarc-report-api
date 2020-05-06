@@ -25,6 +25,7 @@ python_version = "3.8"
 test = "pytest"
 server = "python dmarc_report_api/app.py"
 gen-token = "python scripts/jwt_gen.py"
+demo = "python dmarc_report_api/data/fetch_dmarc_summaries.py"
 
 [pipenv]
 allow_prereleases = false

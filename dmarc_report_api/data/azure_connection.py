@@ -11,8 +11,6 @@ CONTAINER_NAME = os.getenv('CONTAINER')
 
 try:
     client = cosmos_client.CosmosClient(AZURE_ENDPOINT, {'masterKey': AZURE_KEY})
-    database = client.ReadDatabase("dbs/" + DATABASE_NAME)
-    container = client.ReadContainer("dbs/" + DATABASE_NAME + "/colls/" + CONTAINER_NAME)
 except errors.HTTPFailure as e:
     raise GraphQLError("Cosmos HTTP Error: " + str(e))
 
