@@ -3,8 +3,7 @@ import graphene
 from graphene import relay
 
 from dmarc_report_api.scalars.url_scalar import URL
-from dmarc_report_api.queries.dmarc_summaries.summary_query import DmarcSummaries
-from dmarc_report_api.queries.dmarc_summaries.summary_resolver import resolve_report_query
+from dmarc_report_api.queries import DmarcSummaries, resolve_dmarc_summaries
 
 
 class Query(graphene.ObjectType):
@@ -30,6 +29,7 @@ class Query(graphene.ObjectType):
     )
 
     def resolve_dmarc_summary(self, info, **kwargs):
-        return resolve_report_query(self, info, **kwargs)
+        return resolve_dmarc_summaries(self, info, **kwargs)
+
 
 schema = graphene.Schema(query=Query)

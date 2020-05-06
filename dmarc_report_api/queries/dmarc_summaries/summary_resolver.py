@@ -8,7 +8,7 @@ from dmarc_report_api.auth import require_token
 
 
 # @require_token
-def resolve_report_query(self, info, **kwargs):
+def resolve_dmarc_summaries(self, info, **kwargs):
     domain = kwargs.get('domain', None)
     start_date = kwargs.get('start_date', None)
     end_date = kwargs.get('end_date', None)
