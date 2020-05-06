@@ -24,6 +24,7 @@ class Query(graphene.ObjectType):
             description="Set the end date in a date range select.",
             required=False,
         ),
+        description="Summarized DMARC aggregate reports",
     )
 
     def resolve_dmarc_summary(self, info, **kwargs):

@@ -7,8 +7,12 @@ from dmarc_report_api.queries.dmarc_summaries.category_totals import CategoryTot
 
 class DmarcSummaries(graphene.ObjectType):
     """
-
+    Summarized DMARC aggregate reports
     """
 
-    top_senders = graphene.Field(lambda: TopSenders, description="")
-    category_totals = graphene.Field(lambda: CategoryTotals, description="")
+    top_senders = graphene.Field(
+        lambda: TopSenders, description="Top senders for each category"
+    )
+    category_totals = graphene.Field(
+        lambda: CategoryTotals, description="Category totals for quick viewing"
+    )
