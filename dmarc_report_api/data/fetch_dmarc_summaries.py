@@ -17,7 +17,7 @@ def fetch_summaries(domain, start_date, end_date):
     try:
         reports = client.QueryItems(
             "dbs/" + DATABASE_NAME + "/colls/" + SUMMARIES_CONTAINER,
-            '''SELECT * FROM c IN dmarc-summaries.periods WHERE c.id = '{domain}' AND c.start > '{start_date}' AND c.end < '{end_date}' '''.format(
+            '''SELECT l.top_senders, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date >= '{start_date}' AND l.end_date <= '{end_date}' '''.format(
                 domain=domain,
                 start_date=str(start_date),
                 end_date=str(end_date)
@@ -32,9 +32,3 @@ def fetch_summaries(domain, start_date, end_date):
         raise GraphQLError("Cosmos Error: " + str(e))
 
     return rtr_list
-
-
-demo = fetch_summaries("cerb.canada.ca", "2020-04-06", "2020-05-06")
-for test in demo:
-    print(json.dumps(test, indent=2))
-

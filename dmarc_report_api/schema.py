@@ -2,15 +2,16 @@ import graphene
 
 from graphene import relay
 
-from dmarc_report_api.queries import ReportQuery, resolve_report_query
 from dmarc_report_api.scalars.url_scalar import URL
+from dmarc_report_api.queries.dmarc_summaries.summary_query import DmarcSummaries
+from dmarc_report_api.queries.dmarc_summaries.summary_resolver import resolve_report_query
 
 
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
 
-    dmarc_report = graphene.List(
-        lambda: ReportQuery,
+    dmarc_summary = graphene.Field(
+        lambda: DmarcSummaries,
         domain=graphene.Argument(
             URL,
             description="Domain used to select reports",
@@ -28,8 +29,7 @@ class Query(graphene.ObjectType):
         )
     )
 
-    def resolve_dmarc_report(self, info, **kwargs):
+    def resolve_dmarc_summary(self, info, **kwargs):
         return resolve_report_query(self, info, **kwargs)
-
 
 schema = graphene.Schema(query=Query)
