@@ -23,4 +23,6 @@ class TestInputValidation(TestCase):
         Test to ensure that special characters are escaped
         """
         input = "<script>This Should Be Escaped</script>"
-        assert "&lt;script&gt;This Should Be Escaped&lt;/script&gt;" == cleanse_input(input)
+        assert "&lt;script&gt;This Should Be Escaped&lt;/script&gt;" == cleanse_input(
+            input
+        )

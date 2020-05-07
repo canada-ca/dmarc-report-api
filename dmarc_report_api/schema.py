@@ -3,7 +3,11 @@ import graphene
 from graphene import relay
 
 from dmarc_report_api.scalars.url_scalar import URL
-from dmarc_report_api.queries import DmarcSummaries, resolve_dmarc_summary_by_period, resolve_total_dmarc_summaries
+from dmarc_report_api.queries import (
+    DmarcSummaries,
+    resolve_dmarc_summary_by_period,
+    resolve_total_dmarc_summaries,
+)
 
 
 class Query(graphene.ObjectType):

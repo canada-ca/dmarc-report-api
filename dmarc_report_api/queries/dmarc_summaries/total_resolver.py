@@ -27,7 +27,9 @@ def resolve_total_dmarc_summaries(self, info, **kwargs):
     if start_date > end_date:
         raise GraphQLError("Error, start date cannot be greater then end date")
 
-    summaries = fetch_all_summaries_by_domain(domain=domain, start_date=start_date, end_date=end_date)
+    summaries = fetch_all_summaries_by_domain(
+        domain=domain, start_date=start_date, end_date=end_date
+    )
 
     if not summaries:
         raise GraphQLError(
@@ -38,10 +40,10 @@ def resolve_total_dmarc_summaries(self, info, **kwargs):
     for summary in summaries:
         rtr_list.append(
             DmarcSummaries(
-                datetime.datetime.strptime(summary['start_date'], "%Y-%m-%d"),
-                datetime.datetime.strptime(summary['end_date'], "%Y-%m-%d"),
+                datetime.datetime.strptime(summary["start_date"], "%Y-%m-%d"),
+                datetime.datetime.strptime(summary["end_date"], "%Y-%m-%d"),
                 summary["top_senders"],
-                summary["category_totals"]
+                summary["category_totals"],
             )
         )
 
