@@ -9,7 +9,12 @@ class DmarcSummaries(graphene.ObjectType):
     """
     Summarized DMARC aggregate reports
     """
-
+    start_date = graphene.Date(
+        description="Start date of data collection"
+    )
+    end_date = graphene.Date(
+        description="End date of data collection"
+    )
     top_senders = graphene.Field(
         lambda: TopSenders, description="Top senders for each category"
     )
