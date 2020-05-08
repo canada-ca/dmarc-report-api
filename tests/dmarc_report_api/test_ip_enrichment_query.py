@@ -4,6 +4,7 @@ import pytest_mock
 
 from flask import Request
 from graphene.test import Client
+from json import dumps
 from pytest import fail
 from werkzeug.test import create_environ
 
@@ -76,7 +77,104 @@ def test_valid_query_get_ip_enrichment(mocker):
     if "errors" in executed:
         fail(
             "Tried to execute the getIpEnrichment query, this error occurred: "
-            "{}".format(executed)
+            "{}".format(dumps(executed, indent=2))
         )
 
     assert executed == expected_result
+
+
+def test_query_get_ip_enrichment_invalid_domain(mocker):
+    """
+    Test to see if error appears if domain is left blank
+    """
+    mocker.patch(
+        "dmarc_report_api.queries.ip_enrichment.ip_enrichment_resolver"
+        ".fetch_ip_enrichment",
+        autospec=True,
+        return_value=mock_data,
+    )
+
+    query = """
+    {
+        getIpEnrichmentData(
+            domain: "notAUrl"
+        ) {
+            sourceIp
+            ipData {
+                country
+                countryCode
+                isp
+                org
+                asName
+                asNum
+                asOrg
+                dnsHost
+                dnsDomain
+            }
+        }
+    }
+    """
+
+    executed = Client(schema=schema).execute(query, context_value=auth_header())
+
+    if "errors" not in executed:
+        fail(
+            "Expecting query to error out, Instead "
+            "{}".format(
+                dumps(executed, indent=2)
+            )
+        )
+
+    errors = executed.values()
+    [first] = errors
+    expected_message = first[0]["message"]
+    assert expected_message == "Value is not a valid URL : notAUrl"
+
+
+def test_query_get_ip_enrichment_empty_data_return(mocker):
+    """
+    Test to see if error appears if no data is found for that domain
+    """
+    mocker.patch(
+        "dmarc_report_api.queries.ip_enrichment.ip_enrichment_resolver"
+        ".fetch_ip_enrichment",
+        autospec=True,
+        return_value=[],
+    )
+
+    query = """
+    {
+        getIpEnrichmentData(
+            domain: "empty.test.ca"
+        ) {
+            sourceIp
+            ipData {
+                country
+                countryCode
+                isp
+                org
+                asName
+                asNum
+                asOrg
+                dnsHost
+                dnsDomain
+            }
+        }
+    }
+    """
+
+    executed = Client(schema=schema).execute(query, context_value=auth_header())
+
+    if "errors" not in executed:
+        fail(
+            "Expecting query to error out, Instead "
+            "{}".format(
+                dumps(executed, indent=2)
+            )
+        )
+
+    errors, data = executed.values()
+    [first] = errors
+    message, _, _ = first.values()
+
+    assert message == "Error, there is no data for that domain"
