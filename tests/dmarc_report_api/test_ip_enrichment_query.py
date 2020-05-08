@@ -14,7 +14,7 @@ from tests.mock_data.mock_ip_enrichment import mock_data
 
 def auth_header():
     env = create_environ()
-    env.update(HTTP_AUTHORIZATION=jwt_gen(os.getenv('TOKEN')))
+    env.update(HTTP_AUTHORIZATION=jwt_gen(os.getenv("TOKEN")))
     return Request(env)
 
 
@@ -23,13 +23,13 @@ def test_query_get_ip_enrichment(mocker):
     Test to see if the getIpEnrichment query works
     """
     mocker.patch(
-        'dmarc_report_api.queries.ip_enrichment.ip_enrichment_resolver'
-        '.fetch_ip_enrichment',
+        "dmarc_report_api.queries.ip_enrichment.ip_enrichment_resolver"
+        ".fetch_ip_enrichment",
         autospec=True,
-        return_value=mock_data
+        return_value=mock_data,
     )
 
-    query = '''
+    query = """
     {
         getIpEnrichmentData(
             domain: "test.ca"
@@ -48,29 +48,26 @@ def test_query_get_ip_enrichment(mocker):
             }
         }
     }
-    '''
+    """
 
-    executed = Client(schema=schema).execute(
-        query,
-        context_value=auth_header()
-    )
+    executed = Client(schema=schema).execute(query, context_value=auth_header())
 
     expected_result = {
-        'data': {
-            'getIpEnrichmentData': [
+        "data": {
+            "getIpEnrichmentData": [
                 {
-                    'sourceIp': "12.34.567.891",
-                    'ipData': {
-                        'country': "Canada",
-                        'countryCode': "CA",
-                        'isp': "Some Cool ISP",
-                        'org': "SCI DATA (canada-east-1)",
-                        'asName': "SCI-DATA",
-                        'asNum': "123456",
-                        'asOrg': "Some Cool, Inc.",
-                        'dnsHost': "dns.test.ca",
-                        'dnsDomain': "test.ca",
-                    }
+                    "sourceIp": "12.34.567.891",
+                    "ipData": {
+                        "country": "Canada",
+                        "countryCode": "CA",
+                        "isp": "Some Cool ISP",
+                        "org": "SCI DATA (canada-east-1)",
+                        "asName": "SCI-DATA",
+                        "asNum": "123456",
+                        "asOrg": "Some Cool, Inc.",
+                        "dnsHost": "dns.test.ca",
+                        "dnsDomain": "test.ca",
+                    },
                 }
             ]
         }
@@ -79,9 +76,7 @@ def test_query_get_ip_enrichment(mocker):
     if "errors" in executed:
         fail(
             "Tried to execute the getIpEnrichment query, this error occurred: "
-            "{}".format(
-                executed
-            )
+            "{}".format(executed)
         )
 
     assert executed == expected_result
