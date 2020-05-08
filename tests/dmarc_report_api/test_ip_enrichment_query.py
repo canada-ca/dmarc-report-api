@@ -11,6 +11,7 @@ from werkzeug.test import create_environ
 from dmarc_report_api.schema import schema
 from scripts.jwt_gen import jwt_gen
 from tests.mock_data.mock_ip_enrichment import mock_data
+from tests.expected_result_dictionaries.ip_enrichment_dict import ip_enrichment_expected
 
 
 def auth_header():
@@ -53,26 +54,7 @@ def test_valid_query_get_ip_enrichment(mocker):
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
-    expected_result = {
-        "data": {
-            "getIpEnrichmentData": [
-                {
-                    "sourceIp": "12.34.567.891",
-                    "ipData": {
-                        "country": "Canada",
-                        "countryCode": "CA",
-                        "isp": "Some Cool ISP",
-                        "org": "SCI DATA (canada-east-1)",
-                        "asName": "SCI-DATA",
-                        "asNum": "123456",
-                        "asOrg": "Some Cool, Inc.",
-                        "dnsHost": "dns.test.ca",
-                        "dnsDomain": "test.ca",
-                    },
-                }
-            ]
-        }
-    }
+    expected_result = ip_enrichment_expected
 
     if "errors" in executed:
         fail(
