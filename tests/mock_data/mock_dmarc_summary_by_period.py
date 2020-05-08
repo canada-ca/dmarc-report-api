@@ -5,13 +5,37 @@ mock_data = [
         "top_senders": {
             "full_pass": [],
             "spf_failure": [],
-            "spf_misaligned": [],
-            "dkim_failure": [],
+            "spf_misaligned": [
+                {
+                    "source_ip_address": "12.34.567.891",
+                    "spf_domains": "some.spf.domain",
+                    "dkim_domains": "",
+                    "dkim_selectors": "",
+                    "total": 1000
+                }
+            ],
+            "dkim_failure": [
+                {
+                    "source_ip_address": "12.34.567.891",
+                    "spf_domains": "some.spf.domain",
+                    "dkim_domains": "",
+                    "dkim_selectors": "",
+                    "total": 1000
+                }
+            ],
             "dkim_misaligned": [],
-            "dmarc_failure": []
+            "dmarc_failure": [
+                {
+                    "source_ip_address": "12.34.567.891",
+                    "spf_domains": "some.spf.domain",
+                    "dkim_domains": "",
+                    "dkim_selectors": "",
+                    "total": 1000
+                }
+            ]
         },
         "category_totals": {
-            "dmarc-fail-none": 0,
+            "dmarc-fail-none": 1000,
             "spf-pass/dkim-fail": 0,
             "spf-pass/dkim-pass": 0,
             "dmarc-fail-reject": 0,

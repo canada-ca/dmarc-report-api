@@ -54,15 +54,13 @@ def test_valid_query_get_ip_enrichment(mocker):
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
-    expected_result = ip_enrichment_expected
-
     if "errors" in executed:
         fail(
             "Tried to execute the getIpEnrichment query, this error occurred: "
             "{}".format(dumps(executed, indent=2))
         )
 
-    assert executed == expected_result
+    assert executed == ip_enrichment_expected
 
 
 def test_query_get_ip_enrichment_invalid_domain(mocker):
