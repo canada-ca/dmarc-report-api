@@ -1,5 +1,4 @@
 import os
-import json
 import azure.cosmos.errors as errors
 
 from graphql import GraphQLError

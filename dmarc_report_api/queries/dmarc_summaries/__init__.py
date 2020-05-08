@@ -13,7 +13,7 @@ from dmarc_report_api.queries.dmarc_summaries.total_resolver import (
 get_dmarc_summary_by_period = graphene.Field(
     lambda: DmarcSummaries,
     domain=graphene.Argument(
-        URL, description="Domain used to select reports", required=True
+        URL, description="Domain used to select data", required=True
     ),
     start_date=graphene.Argument(
         graphene.String,
