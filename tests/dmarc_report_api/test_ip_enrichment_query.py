@@ -18,7 +18,7 @@ def auth_header():
     return Request(env)
 
 
-def test_query_get_ip_enrichment(mocker):
+def test_valid_query_get_ip_enrichment(mocker):
     """
     Test to see if the getIpEnrichment query works
     """
