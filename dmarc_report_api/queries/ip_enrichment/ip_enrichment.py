@@ -7,10 +7,6 @@ class IPEnrichment(graphene.ObjectType):
     """
 
     """
-    source_ip = graphene.String(
-        description=""
-    )
-    ip_data = graphene.Field(
-        lambda: IPData,
-        description=""
-    )
+
+    source_ip = graphene.String(description="")
+    ip_data = graphene.Field(lambda: IPData, description="")

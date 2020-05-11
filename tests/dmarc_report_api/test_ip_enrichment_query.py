@@ -100,9 +100,7 @@ def test_query_get_ip_enrichment_invalid_domain(mocker):
     if "errors" not in executed:
         fail(
             "Expecting query to error out, Instead "
-            "{}".format(
-                dumps(executed, indent=2)
-            )
+            "{}".format(dumps(executed, indent=2))
         )
 
     errors = executed.values()
@@ -148,9 +146,7 @@ def test_query_get_ip_enrichment_empty_data_return(mocker):
     if "errors" not in executed:
         fail(
             "Expecting query to error out, Instead "
-            "{}".format(
-                dumps(executed, indent=2)
-            )
+            "{}".format(dumps(executed, indent=2))
         )
 
     errors, data = executed.values()

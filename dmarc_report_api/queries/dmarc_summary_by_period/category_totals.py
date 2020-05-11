@@ -5,9 +5,8 @@ class CategoryTotals(graphene.ObjectType):
     """
     This object displays the total amount of messages that fit into each category
     """
-    dmarc_fail_none = graphene.Int(
-        description="Amount of messages that"
-    )
+
+    dmarc_fail_none = graphene.Int(description="Amount of messages that")
     dmarc_fail_quarantine = graphene.Int(
         description="Amount of messages that failed DMARC and were quarantined"
     )

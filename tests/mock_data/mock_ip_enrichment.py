@@ -10,7 +10,7 @@ mock_data = [
                 "as_num": 123456,
                 "as_org": "Some Cool, Inc.",
                 "dns_host": "dns.test.ca",
-                "dns_domain": "test.ca"
+                "dns_domain": "test.ca",
             }
         }
     }

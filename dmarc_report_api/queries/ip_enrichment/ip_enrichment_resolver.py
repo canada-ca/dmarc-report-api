@@ -16,18 +16,11 @@ def resolve_ip_enrichment(self, info, **kwargs):
     ip_data_set = fetch_ip_enrichment(domain=domain)
 
     if not ip_data_set:
-        raise GraphQLError(
-            "Error, there is no data for that domain"
-        )
+        raise GraphQLError("Error, there is no data for that domain")
 
     rtr_list = []
     for data in ip_data_set:
         for k, v in data["ip_enrichment"].items():
-            rtr_list.append(
-                IPEnrichment(
-                    k,
-                    v
-                )
-            )
+            rtr_list.append(IPEnrichment(k, v))
 
     return rtr_list

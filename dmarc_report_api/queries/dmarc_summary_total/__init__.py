@@ -1,6 +1,8 @@
 import graphene
 
-from dmarc_report_api.queries.dmarc_summary_total.resolver import resolve_total_dmarc_summaries
+from dmarc_report_api.queries.dmarc_summary_total.resolver import (
+    resolve_total_dmarc_summaries,
+)
 from dmarc_report_api.scalars import URL
 from dmarc_report_api.queries.dmarc_summary_total.dmarc_summaries import DmarcSummaries
 

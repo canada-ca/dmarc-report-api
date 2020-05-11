@@ -13,7 +13,7 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
                 ],
                 "dkim_failure": [
@@ -22,7 +22,7 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
                 ],
                 "dkim_misaligned": [],
@@ -32,9 +32,9 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
-                ]
+                ],
             },
             "category_totals": {
                 "dmarc-fail-none": 1000,
@@ -44,8 +44,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         }
-    ]
+    ],
 }

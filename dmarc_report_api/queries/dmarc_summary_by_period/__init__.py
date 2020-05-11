@@ -1,8 +1,12 @@
 import graphene
 
-from dmarc_report_api.queries.dmarc_summary_by_period.resolver import resolve_dmarc_summary_by_period
+from dmarc_report_api.queries.dmarc_summary_by_period.resolver import (
+    resolve_dmarc_summary_by_period,
+)
 from dmarc_report_api.scalars import URL
-from dmarc_report_api.queries.dmarc_summary_by_period.dmarc_summary_by_period import DmarcSummaryByPeriod
+from dmarc_report_api.queries.dmarc_summary_by_period.dmarc_summary_by_period import (
+    DmarcSummaryByPeriod,
+)
 
 
 get_dmarc_summary_by_period = graphene.Field(

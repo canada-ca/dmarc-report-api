@@ -14,7 +14,7 @@ expected_summary_period_data = {
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000
+                            "total": 1000,
                         }
                     ],
                     "dkimFailure": [
@@ -23,7 +23,7 @@ expected_summary_period_data = {
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000
+                            "total": 1000,
                         }
                     ],
                     "dkimMisaligned": [],
@@ -33,9 +33,9 @@ expected_summary_period_data = {
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000
+                            "total": 1000,
                         }
-                    ]
+                    ],
                 },
                 "categoryTotals": {
                     "dmarcFailNone": 1000,
@@ -43,9 +43,9 @@ expected_summary_period_data = {
                     "dmarcFailReject": 0,
                     "spfFailDkimPass": 0,
                     "spfPassDkimFail": 0,
-                    "spfPassDkimPass": 0
-                }
-            }
+                    "spfPassDkimPass": 0,
+                },
+            },
         }
     }
 }

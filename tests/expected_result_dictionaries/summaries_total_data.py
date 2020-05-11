@@ -12,7 +12,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -20,8 +20,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2020-05-01",
@@ -32,7 +32,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -40,8 +40,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2020-04-01",
@@ -55,7 +55,7 @@ expected_results = {
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000
+                                "total": 1000,
                             }
                         ],
                         "dkimFailure": [
@@ -64,7 +64,7 @@ expected_results = {
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000
+                                "total": 1000,
                             }
                         ],
                         "dkimMisaligned": [],
@@ -74,9 +74,9 @@ expected_results = {
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000
+                                "total": 1000,
                             }
-                        ]
+                        ],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 1000,
@@ -84,8 +84,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2020-03-01",
@@ -96,7 +96,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -104,8 +104,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2020-02-01",
@@ -116,7 +116,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -124,8 +124,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2020-01-01",
@@ -136,7 +136,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -144,8 +144,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-12-01",
@@ -156,7 +156,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -164,8 +164,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-11-01",
@@ -176,7 +176,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -184,8 +184,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-10-01",
@@ -196,7 +196,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -204,8 +204,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-09-01",
@@ -216,7 +216,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -224,8 +224,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-08-01",
@@ -236,7 +236,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -244,8 +244,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-07-01",
@@ -256,7 +256,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -264,8 +264,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-06-01",
@@ -276,7 +276,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -284,8 +284,8 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
+                        "spfPassDkimPass": 0,
+                    },
                 },
                 {
                     "startDate": "2019-05-01",
@@ -296,7 +296,7 @@ expected_results = {
                         "spfMisaligned": [],
                         "dkimFailure": [],
                         "dkimMisaligned": [],
-                        "dmarcFailure": []
+                        "dmarcFailure": [],
                     },
                     "categoryTotals": {
                         "dmarcFailNone": 0,
@@ -304,10 +304,10 @@ expected_results = {
                         "dmarcFailReject": 0,
                         "spfFailDkimPass": 0,
                         "spfPassDkimFail": 0,
-                        "spfPassDkimPass": 0
-                    }
-                }
-            ]
+                        "spfPassDkimPass": 0,
+                    },
+                },
+            ],
         }
     }
 }

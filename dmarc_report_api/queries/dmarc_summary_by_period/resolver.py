@@ -1,7 +1,9 @@
 import datetime
 from graphql import GraphQLError
 
-from dmarc_report_api.queries.dmarc_summary_by_period.dmarc_summary_by_period import DmarcSummaryByPeriod
+from dmarc_report_api.queries.dmarc_summary_by_period.dmarc_summary_by_period import (
+    DmarcSummaryByPeriod,
+)
 from dmarc_report_api.data.fetch_dmarc_summaries import fetch_summary_by_period
 from dmarc_report_api.shared_functions import cleanse_input
 from dmarc_report_api.auth import require_token
@@ -42,7 +44,4 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs):
             "Error, there is no data for that time period, or domain is incorrect"
         )
 
-    return DmarcSummaryByPeriod(
-        summary.get("id"),
-        summary["periods"][0]
-    )
+    return DmarcSummaryByPeriod(summary.get("id"), summary["periods"][0])

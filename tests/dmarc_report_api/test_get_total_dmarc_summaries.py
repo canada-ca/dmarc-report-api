@@ -27,10 +27,10 @@ def test_valid_query_get_dmarc_total(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
         autospec=True,
-        return_value=mock_data
+        return_value=mock_data,
     )
 
-    query = '''
+    query = """
     {
         getTotalDmarcSummaries (
             domain: "test.domain.ca"
@@ -96,14 +96,15 @@ def test_valid_query_get_dmarc_total(mocker):
             }
         }
     }
-    '''
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
     if "errors" in executed:
         fail(
-            "Tried to execute the getDmarcSummaryByPeriod query, Instead: {}"
-            .format(dumps(executed, indent=2))
+            "Tried to execute the getDmarcSummaryByPeriod query, Instead: {}".format(
+                dumps(executed, indent=2)
+            )
         )
 
     assert executed == expected_results
@@ -116,10 +117,10 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
         autospec=True,
-        return_value=[]
+        return_value=[],
     )
 
-    query = '''
+    query = """
     {
         getTotalDmarcSummaries (
             domain: "test.domain.ca"
@@ -185,7 +186,7 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
             }
         }
     }
-    '''
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
@@ -198,8 +199,10 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     errors, data = executed.values()
     [first] = errors
     expected_message = first["message"]
-    assert expected_message == "Error, there is no data for that time " \
-                               "period, or domain is incorrect"
+    assert (
+        expected_message == "Error, there is no data for that time "
+        "period, or domain is incorrect"
+    )
 
 
 def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
@@ -210,10 +213,10 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
         autospec=True,
-        return_value=[]
+        return_value=[],
     )
 
-    query = '''
+    query = """
     {
         getTotalDmarcSummaries (
             domain: "domain.does.not.work"
@@ -279,7 +282,7 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
             }
         }
     }
-    '''
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
@@ -292,5 +295,7 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     errors, data = executed.values()
     [first] = errors
     expected_message = first["message"]
-    assert expected_message == "Error, there is no data for that time " \
-                               "period, or domain is incorrect"
+    assert (
+        expected_message == "Error, there is no data for that time "
+        "period, or domain is incorrect"
+    )

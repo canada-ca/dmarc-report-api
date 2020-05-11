@@ -10,7 +10,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -20,8 +20,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2020-05-01",
@@ -32,7 +32,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -42,8 +42,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2020-04-01",
@@ -57,7 +57,7 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
                 ],
                 "dkim_failure": [
@@ -66,7 +66,7 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
                 ],
                 "dkim_misaligned": [],
@@ -76,9 +76,9 @@ mock_data = {
                         "spf_domains": "test.email.domain.ca",
                         "dkim_domains": "",
                         "dkim_selectors": "",
-                        "total": 1000
+                        "total": 1000,
                     }
-                ]
+                ],
             },
             "category_totals": {
                 "dmarc-fail-none": 1000,
@@ -88,8 +88,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2020-03-01",
@@ -100,7 +100,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -110,8 +110,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2020-02-01",
@@ -122,7 +122,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -132,8 +132,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2020-01-01",
@@ -144,7 +144,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -154,8 +154,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-12-01",
@@ -166,7 +166,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -176,8 +176,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-11-01",
@@ -188,7 +188,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -198,8 +198,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-10-01",
@@ -210,7 +210,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -220,8 +220,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-09-01",
@@ -232,7 +232,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -242,8 +242,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-08-01",
@@ -254,7 +254,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -264,8 +264,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-07-01",
@@ -276,7 +276,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -286,8 +286,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-06-01",
@@ -298,7 +298,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -308,8 +308,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
+                "spf-pass/dkim-pass": 0,
+            },
         },
         {
             "start_date": "2019-05-01",
@@ -320,7 +320,7 @@ mock_data = {
                 "spf_misaligned": [],
                 "dkim_failure": [],
                 "dkim_misaligned": [],
-                "dmarc_failure": []
+                "dmarc_failure": [],
             },
             "category_totals": {
                 "arc-pass": 0,
@@ -330,9 +330,8 @@ mock_data = {
                 "forwarded": 0,
                 "dmarc-fail-reject": 0,
                 "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0
-            }
-        }
-    ]
+                "spf-pass/dkim-pass": 0,
+            },
+        },
+    ],
 }
-

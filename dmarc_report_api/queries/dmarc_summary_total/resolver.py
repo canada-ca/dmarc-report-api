@@ -36,7 +36,4 @@ def resolve_total_dmarc_summaries(self, info, **kwargs):
             "Error, there is no data for that time period, or domain is incorrect"
         )
 
-    return DmarcSummaries(
-        summaries.get("id"),
-        summaries.get("periods")
-    )
+    return DmarcSummaries(summaries.get("id"), summaries.get("periods"))

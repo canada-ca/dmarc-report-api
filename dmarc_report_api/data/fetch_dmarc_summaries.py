@@ -37,10 +37,7 @@ def fetch_summary_by_period(domain, start_date, end_date):
     except errors.CosmosError as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
-    return {
-        "id": id_list[0].get("id", None),
-        "periods": rtr_list
-    }
+    return {"id": id_list[0].get("id", None), "periods": rtr_list}
 
 
 def fetch_all_summaries_by_domain(domain, start_date, end_date):
@@ -74,7 +71,4 @@ def fetch_all_summaries_by_domain(domain, start_date, end_date):
     except errors.CosmosError as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
-    return {
-        "id": id_list[0].get("id", None),
-        "periods": rtr_list
-    }
+    return {"id": id_list[0].get("id", None), "periods": rtr_list}
