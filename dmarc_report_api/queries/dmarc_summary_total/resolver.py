@@ -2,7 +2,7 @@ import datetime
 
 from graphql import GraphQLError
 
-from dmarc_report_api.queries.dmarc_summaries.summary_query import DmarcSummaries
+from dmarc_report_api.queries.dmarc_summary_total.dmarc_summaries import DmarcSummaries
 from dmarc_report_api.data.fetch_dmarc_summaries import fetch_all_summaries_by_domain
 from dmarc_report_api.shared_functions import cleanse_input
 from dmarc_report_api.auth import require_token
@@ -36,15 +36,7 @@ def resolve_total_dmarc_summaries(self, info, **kwargs):
             "Error, there is no data for that time period, or domain is incorrect"
         )
 
-    rtr_list = []
-    for summary in summaries:
-        rtr_list.append(
-            DmarcSummaries(
-                datetime.datetime.strptime(summary["start_date"], "%Y-%m-%d"),
-                datetime.datetime.strptime(summary["end_date"], "%Y-%m-%d"),
-                summary["top_senders"],
-                summary["category_totals"],
-            )
-        )
-
-    return rtr_list
+    return DmarcSummaries(
+        summaries.get("id"),
+        summaries.get("periods")
+    )

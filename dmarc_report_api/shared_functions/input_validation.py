@@ -10,6 +10,6 @@ def cleanse_input(input_string):
     """
     if input_string is None:
         input_string = ""
-    input_string = input_string.strip()
-    input_string = html.escape(input_string)
+    input_string = str(input_string).strip()
+    input_string = html.escape(str(input_string))
     return input_string
