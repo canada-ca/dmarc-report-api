@@ -10,13 +10,14 @@ from dmarc_report_api.auth import require_token
 
 
 @require_token
-def resolve_dmarc_summary_by_period(self, info, **kwargs):
+def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPeriod :
     """
-
+    This function is used to create a DmarcSummaryByPeriod object with data
+    gathered from an Azure Cosmos Storage DB
     :param self:
-    :param info:
-    :param kwargs:
-    :return:
+    :param info: Request information sent to the sever from a client
+    :param kwargs: Field arguments (i.e. url), and user_roles
+    :return: DmarcSummaryByPeriod Object with Data
     """
     domain = cleanse_input(kwargs.get("domain", None))
     start_date = cleanse_input(kwargs.get("start_date", None))

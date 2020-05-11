@@ -9,7 +9,15 @@ from dmarc_report_api.auth import require_token
 
 
 @require_token
-def resolve_total_dmarc_summaries(self, info, **kwargs):
+def resolve_total_dmarc_summaries(self, info, **kwargs) -> DmarcSummaries:
+    """
+    This function is used to create a DmarcSummaries object with data gathered
+    from an Azure Cosmos Storage DB
+    :param self:
+    :param info: Request information sent to the sever from a client
+    :param kwargs: Field arguments (i.e. url), and user_roles
+    :return: DmarcSummaries Object with Data
+    """
     domain = cleanse_input(kwargs.get("domain", None))
     start_date = cleanse_input(kwargs.get("start_date", None))
     end_date = cleanse_input(kwargs.get("end_date", None))
