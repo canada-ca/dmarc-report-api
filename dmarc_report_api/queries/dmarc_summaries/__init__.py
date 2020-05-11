@@ -18,12 +18,12 @@ get_dmarc_summary_by_period = graphene.Field(
     start_date=graphene.Argument(
         graphene.String,
         description="Set the start date in a date range select.",
-        required=False,
+        required=True,
     ),
     end_date=graphene.Argument(
         graphene.String,
         description="Set the end date in a date range select.",
-        required=False,
+        required=True,
     ),
     description="Summarized DMARC aggregate reports",
     resolver=resolve_dmarc_summary_by_period,
@@ -37,12 +37,12 @@ get_total_dmarc_summaries = graphene.List(
     start_date=graphene.Argument(
         graphene.String,
         description="Set the start date in a date range select.",
-        required=False,
+        required=True,
     ),
     end_date=graphene.Argument(
         graphene.String,
         description="Set the end date in a date range select.",
-        required=False,
+        required=True,
     ),
     description="Summarized DMARC aggregate reports",
     resolver=resolve_total_dmarc_summaries,
