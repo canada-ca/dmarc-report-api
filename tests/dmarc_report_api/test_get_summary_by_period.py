@@ -293,3 +293,96 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_end_date(mocker):
     expected_message = first["message"]
     assert expected_message == "Error, there is no data for that time " \
                                "period, or domain is incorrect"
+
+
+def test_invalid_query_get_dmarc_summary_by_period_incorrect_domain(mocker):
+    """
+    Test to see error appears when db fetch returns nil because of incorrect
+    domain
+    """
+    mocker.patch(
+        "dmarc_report_api.queries.dmarc_summaries.period_resolver.fetch_summary_by_period",
+        autospec=True,
+        return_value=[]
+    )
+
+    query = '''
+        {
+            getDmarcSummaryByPeriod (
+                domain: "this.domain.does.not.exist"
+                startDate: "2020-04-01"
+                endDate: "2020-04-30"
+            ) {
+                startDate
+                endDate
+                topSenders {
+                    fullPass {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                    spfFailure {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                    spfMisaligned {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                    dkimFailure {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                    dkimMisaligned {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                    dmarcFailure {
+                        sourceIpAddress
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        total
+                    }
+                }
+                categoryTotals {
+                    spfPassDkimPass
+                    spfFailDkimPass
+                    dmarcFailNone
+                    forwarded
+                    arcPass
+                    spfPassDkimFail
+                    dmarcFailReject
+                    dmarcFailQuarantine
+                }
+            }
+        }
+        '''
+
+    executed = Client(schema=schema).execute(query, context_value=auth_header())
+
+    if "errors" not in executed:
+        fail(
+            "Tried to execute the getDmarcSummaryByPeriod query thinking it "
+            "would error out, Instead: {}".format(dumps(executed, indent=2))
+        )
+
+    errors, data = executed.values()
+    [first] = errors
+    expected_message = first["message"]
+    assert expected_message == "Error, there is no data for that time " \
+                               "period, or domain is incorrect"
