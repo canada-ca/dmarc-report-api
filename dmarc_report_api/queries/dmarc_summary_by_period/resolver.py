@@ -4,7 +4,7 @@ from graphql import GraphQLError
 from dmarc_report_api.queries.dmarc_summary_by_period.dmarc_summary_by_period import (
     DmarcSummaryByPeriod,
 )
-from dmarc_report_api.data.fetch_dmarc_summaries import fetch_summary_by_period
+from dmarc_report_api.data.fetch_dmarc_summaries import fetch_summary
 from dmarc_report_api.shared_functions import cleanse_input
 from dmarc_report_api.auth import require_token
 
@@ -36,8 +36,8 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPerio
     if start_date > end_date:
         raise GraphQLError("Error, start date cannot be greater then end date")
 
-    summary = fetch_summary_by_period(
-        domain=domain, start_date=start_date, end_date=end_date
+    summary = fetch_summary(
+        domain=domain, start_date=start_date, end_date=end_date, periods=False
     )
 
     if not summary:

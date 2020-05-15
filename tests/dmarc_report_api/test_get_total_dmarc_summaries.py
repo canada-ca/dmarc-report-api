@@ -25,7 +25,7 @@ def test_valid_query_get_dmarc_total(mocker):
     Test to see if the getTotalDmarcSummaries query works
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
+        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
         autospec=True,
         return_value=mock_data,
     )
@@ -115,7 +115,7 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     Test to see if error appears for query in date range that does not exist
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
+        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
         autospec=True,
         return_value=[],
     )
@@ -211,7 +211,7 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     domain
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_all_summaries_by_domain",
+        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
         autospec=True,
         return_value=[],
     )
