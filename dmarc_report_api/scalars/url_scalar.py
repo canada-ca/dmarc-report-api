@@ -3,7 +3,7 @@ from graphene.types import Scalar
 from graphql.language import ast
 from graphql import GraphQLError
 
-URL_REGEX = r'[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+URL_REGEX = r"[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
 
 URL_REGEX_CHECK = compile(URL_REGEX)
 

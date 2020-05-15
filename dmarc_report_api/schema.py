@@ -1,35 +1,18 @@
 import graphene
 
-from graphene import relay
-
-from dmarc_report_api.queries import ReportQuery, resolve_report_query
-from dmarc_report_api.scalars.url_scalar import URL
+from dmarc_report_api.queries.ip_enrichment import get_ip_enrichment_data
+from dmarc_report_api.queries.dmarc_summary_total import get_total_dmarc_summaries
+from dmarc_report_api.queries.dmarc_summary_by_period import get_dmarc_summary_by_period
 
 
 class Query(graphene.ObjectType):
-    node = relay.Node.Field()
+    # Get dmarc summary query object
+    get_dmarc_summary_by_period = get_dmarc_summary_by_period
 
-    dmarc_report = graphene.List(
-        lambda: ReportQuery,
-        domain=graphene.Argument(
-            URL,
-            description="Domain used to select reports",
-            required=True
-        ),
-        start_date=graphene.Argument(
-            graphene.String,
-            description="Set the start date in a date range select.",
-            required=False
-        ),
-        end_date=graphene.Argument(
-            graphene.String,
-            description="Set the end date in a date range select.",
-            required=False
-        )
-    )
+    # Get all dmarc summaries query object
+    get_total_dmarc_summaries = get_total_dmarc_summaries
 
-    def resolve_dmarc_report(self, info, **kwargs):
-        return resolve_report_query(self, info, **kwargs)
+    get_ip_enrichment_data = get_ip_enrichment_data
 
 
 schema = graphene.Schema(query=Query)
