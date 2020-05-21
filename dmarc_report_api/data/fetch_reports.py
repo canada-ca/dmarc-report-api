@@ -1,18 +1,18 @@
 import os
 
 from graphql import GraphQLError
+
 from dmarc_report_api.data.azure_connection import client
 
 DATABASE_NAME = os.getenv("DATABASE")
-SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
+RECORD_CONTAINER = os.getenv("RECORD_CONTAINER")
 
-
-def fetch_ip_enrichment(domain):
+def fetch_reports(domain, start_date, end_date):
     try:
         reports = client.QueryItems(
-            "dbs/" + DATABASE_NAME + "/colls/" + SUMMARIES_CONTAINER,
-            """SELECT DISTINCT c.ip_enrichment FROM c WHERE c.id = '{domain}'""".format(
-                domain=domain
+            "dbs/" + DATABASE_NAME + "/colls/" + RECORD_CONTAINER,
+            """SELECT * FROM c WHERE c.header_from='{domain}' AND c.report_end_date > '{start_date}' AND c.report_end_date < '{end_date}' ORDER BY c.report_end_date ASC""".format(
+                domain=domain, start_date=str(start_date), end_date=str(end_date)
             ),
             {"enableCrossPartitionQuery": True},
         )

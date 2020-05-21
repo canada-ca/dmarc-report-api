@@ -1,8 +1,9 @@
 import os
-import azure.cosmos.errors as errors
-from graphql import GraphQLError
-from dmarc_report_api.data.azure_connection import client, DATABASE_NAME
 
+from graphql import GraphQLError
+from dmarc_report_api.data.azure_connection import client
+
+DATABASE_NAME = os.getenv("DATABASE")
 SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
 
 
@@ -26,7 +27,7 @@ def fetch_summary(domain, start_date, end_date, periods):
         for item in reports:
             rtr_list.append(item)
 
-    except errors.CosmosError as e:
+    except Exception as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
     try:
@@ -41,7 +42,7 @@ def fetch_summary(domain, start_date, end_date, periods):
         for item in reports:
             id_list.append(item)
 
-    except errors.CosmosError as e:
+    except Exception as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
     return {"id": id_list[0].get("id", None), "periods": rtr_list}

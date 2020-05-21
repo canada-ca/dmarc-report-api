@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/track-compliance/ci'
     id: install
-    dir: dmarc_report_api
+    dir: .
     entrypoint: pipenv
     args: ['sync', '-d', '--bare']
     env:
@@ -9,7 +9,7 @@ steps:
 
   - name: 'gcr.io/track-compliance/ci'
     id: test
-    dir: dmarc_report_api
+    dir: .
     entrypoint: pipenv
     args: ['run', 'test']
     env:
@@ -18,25 +18,36 @@ steps:
       - AZURE_KEY=$_AZURE_KEY
       - ACCOUNT=$_ACCOUNT
       - DATABASE=$_DATABASE
-      - CONTAINER=$_CONTAINER
+      - RECORD_CONTAINER=$_RECORD_CONTAINER
+      - SUMMARIES_CONTAINER=$_SUMMARIES_CONTAINER
+      - IP_ENRICHMENT_CONTAINER=$_IP_ENRICHMENT_CONTAINER
+      - SPOOFING_CAMPAIGNS=$_SPOOFING_CAMPAIGNS
       - TOKEN=$_TOKEN
       - JWT_SECRET=$_JWT_SECRET
 
   - name: 'gcr.io/cloud-builders/docker'
-    id: build
-    dir: dmarc_report_api
-    args: ['build', '-t','gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA', '.']
-
-  - name: 'gcr.io/cloud-builders/gcloud'
+    id: build-if-master
+    entrypoint: 'bash'
+    dir: .
     args:
-      - 'run'
-      - 'deploy'
-      - '[SERVICE-NAME]'
-      - '--image'
-      - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'
-      - '--region'
-      - '[REGION]'
-      - '--platform'
-      - 'managed
+    - '-c'
+    - |
+      if [["$BRANCH_NAME" == "master"]]
+      then
+        docker build -t gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA .
+      else
+        exit 0
+      fi
 
-images: ['gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA']
+  - name: 'gcr.io/cloud-builders/docker'
+    id: push-if-master
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |
+      if [["$BRANCH_NAME" == "master"]]
+      then
+        docker push gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA
+      else
+        exit 0
+      fi

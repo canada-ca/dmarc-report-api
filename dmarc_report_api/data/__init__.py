@@ -1,1 +1,0 @@
-from dmarc_report_api.data.azure_connection import fetch_reports

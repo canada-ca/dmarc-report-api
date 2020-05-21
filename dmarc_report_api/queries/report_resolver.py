@@ -3,7 +3,7 @@ import datetime
 from graphql import GraphQLError
 
 from dmarc_report_api.queries.report_query import ReportQuery
-from dmarc_report_api.data import fetch_reports
+from dmarc_report_api.data.fetch_reports import fetch_reports
 from dmarc_report_api.auth import require_token
 
 
