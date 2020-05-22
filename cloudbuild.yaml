@@ -32,7 +32,7 @@ steps:
     args:
     - '-c'
     - |
-      if [["$BRANCH_NAME" == "master"]]
+      if [[ "$BRANCH_NAME" == "master" ]]
       then
         docker build -t gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA .
       else
@@ -45,7 +45,7 @@ steps:
     args:
     - '-c'
     - |
-      if [["$BRANCH_NAME" == "master"]]
+      if [[ "$BRANCH_NAME" == "master" ]]
       then
         docker push gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA
       else
