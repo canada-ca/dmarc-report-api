@@ -35,7 +35,7 @@ def test_valid_query_get_dmarc_summary_by_period(mocker):
     query = """
     {
         getDmarcSummaryByPeriod (
-            domain: "test.domain.ca"
+            domain: "test.domain.gc.ca"
             startDate: "2020-04-01"
             endDate: "2020-04-30"
         ) {
@@ -126,7 +126,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_start_date(mocker):
     query = """
         {
             getDmarcSummaryByPeriod (
-                domain: "test.domain.ca"
+                domain: "test.domain.gc.ca"
                 startDate: "2020-04-05"
                 endDate: "2020-04-30"
             ) {
@@ -222,7 +222,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_end_date(mocker):
     query = """
         {
             getDmarcSummaryByPeriod (
-                domain: "test.domain.ca"
+                domain: "test.domain.gc.ca"
                 startDate: "2020-04-01"
                 endDate: "2020-04-25"
             ) {
@@ -318,7 +318,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_domain(mocker):
     query = """
         {
             getDmarcSummaryByPeriod (
-                domain: "this.domain.does.not.exist"
+                domain: "this.domain.does.not.exist.gc.ca"
                 startDate: "2020-04-01"
                 endDate: "2020-04-30"
             ) {

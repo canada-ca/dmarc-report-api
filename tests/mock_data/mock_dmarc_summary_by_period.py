@@ -1,5 +1,5 @@
 mock_data = {
-    "id": "test.domain.ca",
+    "id": "test.domain.gc.ca",
     "periods": [
         {
             "start_date": "2020-04-01",

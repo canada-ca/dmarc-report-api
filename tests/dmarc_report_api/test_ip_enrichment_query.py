@@ -34,7 +34,7 @@ def test_valid_query_get_ip_enrichment(mocker):
     query = """
     {
         getIpEnrichmentData(
-            domain: "test.ca"
+            domain: "test.gc.ca"
         ) {
             sourceIp
             ipData {
@@ -106,7 +106,7 @@ def test_query_get_ip_enrichment_invalid_domain(mocker):
     errors = executed.values()
     [first] = errors
     expected_message = first[0]["message"]
-    assert expected_message == "Value is not a valid URL : notAUrl"
+    assert expected_message == "Value is not a valid GC URL : notAUrl"
 
 
 def test_query_get_ip_enrichment_empty_data_return(mocker):
@@ -123,7 +123,7 @@ def test_query_get_ip_enrichment_empty_data_return(mocker):
     query = """
     {
         getIpEnrichmentData(
-            domain: "empty.test.ca"
+            domain: "empty.test.gc.ca"
         ) {
             sourceIp
             ipData {

@@ -33,7 +33,7 @@ def test_valid_query_get_dmarc_total(mocker):
     query = """
     {
         getTotalDmarcSummaries (
-            domain: "test.domain.ca"
+            domain: "test.domain.gc.ca"
             startDate: "1970-01-01"
             endDate: "2070-01-01"
         ) {
@@ -123,7 +123,7 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     query = """
     {
         getTotalDmarcSummaries (
-            domain: "test.domain.ca"
+            domain: "test.domain.gc.ca"
             startDate: "1970-01-01"
             endDate: "2000-01-01"
         ) {
@@ -219,7 +219,7 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     query = """
     {
         getTotalDmarcSummaries (
-            domain: "domain.does.not.work"
+            domain: "domain.does.not.work.gc.ca"
             startDate: "1970-01-01"
             endDate: "2070-01-01"
         ) {

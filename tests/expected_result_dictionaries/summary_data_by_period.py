@@ -1,7 +1,7 @@
 expected_summary_period_data = {
     "data": {
         "getDmarcSummaryByPeriod": {
-            "id": "test.domain.ca",
+            "id": "test.domain.gc.ca",
             "period": {
                 "startDate": "2020-04-01",
                 "endDate": "2020-04-30",

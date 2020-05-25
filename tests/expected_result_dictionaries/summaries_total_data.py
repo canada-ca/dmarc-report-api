@@ -1,7 +1,7 @@
 expected_results = {
     "data": {
         "getTotalDmarcSummaries": {
-            "id": "test.domain.ca",
+            "id": "test.domain.canada.ca",
             "periods": [
                 {
                     "startDate": "2020-04-11",
