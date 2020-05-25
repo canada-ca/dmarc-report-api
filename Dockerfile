@@ -31,6 +31,8 @@ COPY Pipfile.lock /api
 
 WORKDIR /api
 
+RUN ln -sfT dash /bin/sh
+
 USER dmarcapi
 RUN pipenv sync --bare
 
