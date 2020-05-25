@@ -18,8 +18,8 @@ RUN set -ex \
     python3-dev \
     python3-pip
 
-#RUN addgroup -gid 1000 -system dmarcapi && \
-#      adduser -u 1000 -system dmarcapi -gecos dmarcapi
+RUN addgroup -gid 1000 -system dmarcapi && \
+      adduser -u 1000 -system dmarcapi -gecos dmarcapi
 
 RUN python3 -m pip install --upgrade setuptools
 RUN python3 -m pip install wheel
@@ -31,9 +31,7 @@ COPY Pipfile.lock /api
 
 WORKDIR /api
 
-RUN ln -sfT dash /bin/sh
-
-#USER dmarcapi
+USER dmarcapi
 RUN pipenv sync --bare
 
 EXPOSE 5000
