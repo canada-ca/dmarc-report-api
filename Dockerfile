@@ -5,6 +5,7 @@ ENV PIPENV_NOSPIN=TRUE
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONPATH=/api
 
 RUN set -ex \
 	\
@@ -29,6 +30,7 @@ COPY Pipfile /api
 COPY Pipfile.lock /api
 
 WORKDIR /api
+
 USER dmarcapi
 RUN pipenv sync --bare
 
