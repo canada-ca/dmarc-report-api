@@ -8,14 +8,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex \
 	\
+	&& savedAptMark="$(apt-mark showmanual)" \
 	&& apt-get update && apt-get install -y --no-install-recommends \
     openssl \
     libffi-dev \
     musl-dev \
     python3.8 \
     python3-dev \
-    python3-pip \
-  && rm -rf /tmp/*
+    python3-pip
 
 RUN addgroup -gid 1000 -system dmarcapi && \
       adduser -u 1000 -system dmarcapi -gecos dmarcapi
