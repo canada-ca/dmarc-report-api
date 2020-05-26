@@ -7,7 +7,7 @@ from waitress import serve
 from dmarc_report_api.backend.security_check import SecurityAnalysisBackend
 from dmarc_report_api.schema import schema
 
-HOST = os.getenv("HOST", "localhost")
+HOST = os.getenv("HOST", "0.0.0.0")
 PORT = os.getenv("PORT", 8080)
 
 app = Flask(__name__)

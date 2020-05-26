@@ -51,3 +51,17 @@ steps:
       else
         exit 0
       fi
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'dmarc-report-api'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'
+      - '--region'
+      - 'us-east1'
+      - 'platform'
+      - 'managed'
+  images:
+    - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'

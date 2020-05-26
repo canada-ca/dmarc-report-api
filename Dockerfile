@@ -5,8 +5,6 @@ ENV PIPENV_NOSPIN TRUE
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-ENV PYTHONPATH /api
-ENV PORT 8080
 ENV HOST 0.0.0.0
 
 RUN set -ex \
@@ -18,7 +16,8 @@ RUN set -ex \
     musl-dev \
     python3.8 \
     python3-dev \
-    python3-pip
+    python3-pip \
+    build-essential
 
 RUN addgroup -gid 1000 -system dmarcapi && \
       adduser -u 1000 -system dmarcapi -gecos dmarcapi
@@ -31,10 +30,12 @@ COPY /dmarc_report_api /api/dmarc_report_api
 COPY Pipfile /api
 COPY Pipfile.lock /api
 
+ENV PYTHONPATH "${PYTHONPATH}:/api"
+
 WORKDIR /api
 
 USER dmarcapi
 RUN pipenv sync --bare
 
 EXPOSE 8080
-CMD pipenv run server
+ENTRYPOINT pipenv run server
