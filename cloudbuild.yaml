@@ -60,7 +60,7 @@ steps:
     - |
       if [[ "$BRANCH_NAME" == "master" ]]
       then
-        run deploy dmarc-report-api --image gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA --region us-east1 --platform managed
+        gcloud run deploy dmarc-report-api --image gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA --region us-east1 --platform managed
       else
         exit 0
       fi
