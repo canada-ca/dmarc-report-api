@@ -58,7 +58,7 @@ steps:
     args:
     - '-c'
     - |
-      if [[ "$BRANCH_NAME == "master" ]]
+      if [[ "$BRANCH_NAME" == "master" ]]
       then
         run deploy dmarc-report-api --image gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA --region us-east1 --platform managed
       else
