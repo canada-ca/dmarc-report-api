@@ -64,5 +64,3 @@ steps:
     - 'us-east1'
     - 'platform'
     - 'managed'
-  images:
-  - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'
