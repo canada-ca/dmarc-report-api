@@ -36,5 +36,5 @@ WORKDIR /api
 USER dmarcapi
 RUN pipenv sync --bare
 
-EXPOSE 5000
+EXPOSE 8080
 CMD pipenv run server
