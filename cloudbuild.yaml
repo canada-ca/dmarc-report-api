@@ -54,6 +54,7 @@ steps:
 
   - name: 'gcr.io/cloud-builders/gcloud'
     id: push-to-cloud-run-if-master
+    entrypoint: 'bash'
     args:
     - '-c'
     - |
