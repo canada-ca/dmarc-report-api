@@ -38,4 +38,4 @@ USER dmarcapi
 RUN pipenv sync --bare
 
 EXPOSE 8080
-ENTRYPOINT pipenv run server
+ENTRYPOINT ["pipenv", "run", "server"]
