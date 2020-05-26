@@ -1,13 +1,15 @@
 import os
 
 from graphql import GraphQLError
-from dmarc_report_api.data.azure_connection import client
+from dmarc_report_api.data.azure_connection import create_azure_clients
 
 DATABASE_NAME = os.getenv("DATABASE")
 SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
 
 
 def fetch_summary(domain, start_date, end_date, periods):
+    summaries_client = create_azure_clients(container=SUMMARIES_CONTAINER)
+
     if periods:
         query = """SELECT l.start_date, l.end_date, l.top_senders, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date >= '{start_date}' AND l.end_date <= '{end_date}' """.format(
                 domain=domain, start_date=str(start_date), end_date=str(end_date)
@@ -18,11 +20,7 @@ def fetch_summary(domain, start_date, end_date, periods):
             )
 
     try:
-        reports = client.QueryItems(
-            "dbs/" + DATABASE_NAME + "/colls/" + SUMMARIES_CONTAINER,
-            query,
-            {"enableCrossPartitionQuery": True},
-        )
+        reports = summaries_client.query_items(query)
         rtr_list = []
         for item in reports:
             rtr_list.append(item)
@@ -31,12 +29,10 @@ def fetch_summary(domain, start_date, end_date, periods):
         raise GraphQLError("Cosmos Error: " + str(e))
 
     try:
-        reports = client.QueryItems(
-            "dbs/" + DATABASE_NAME + "/colls/" + SUMMARIES_CONTAINER,
+        reports = summaries_client.query_items(
             """SELECT c.id FROM c JOIN l IN c.periods WHERE c.id = '{domain}'""".format(
                 domain=domain, start_date=str(start_date), end_date=str(end_date)
-            ),
-            {"enableCrossPartitionQuery": True},
+            )
         )
         id_list = []
         for item in reports:

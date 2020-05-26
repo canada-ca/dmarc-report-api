@@ -24,7 +24,7 @@ python_version = "3.8"
 
 [scripts]
 test = "python -m pytest"
-server = "python dmarc_report_api/app.py --bind :$PORT"
+server = "python dmarc_report_api/app.py"
 gen-token = "python scripts/jwt_gen.py"
 
 [pipenv]

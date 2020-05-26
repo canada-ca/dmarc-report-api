@@ -1,20 +1,20 @@
 import os
 
 from graphql import GraphQLError
-from dmarc_report_api.data.azure_connection import client
+from dmarc_report_api.data.azure_connection import create_azure_clients
 
 DATABASE_NAME = os.getenv("DATABASE")
-SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
+IP_ENRICHMENT_CONTAINER = os.getenv("IP_ENRICHMENT_CONTAINER")
 
 
 def fetch_ip_enrichment(domain):
+    ip_client = create_azure_clients(container=IP_ENRICHMENT_CONTAINER)
+
     try:
-        reports = client.QueryItems(
-            "dbs/" + DATABASE_NAME + "/colls/" + SUMMARIES_CONTAINER,
+        reports = ip_client.query_items(
             """SELECT DISTINCT c.ip_enrichment FROM c WHERE c.id = '{domain}'""".format(
                 domain=domain
             ),
-            {"enableCrossPartitionQuery": True},
         )
         rtr_list = []
         for item in reports:

@@ -15,12 +15,12 @@ get_dmarc_summary_by_period = graphene.Field(
         GCURL, description="Domain used to select data", required=True
     ),
     start_date=graphene.Argument(
-        graphene.String,
+        graphene.Date,
         description="Set the start date in a date range select.",
         required=False,
     ),
     end_date=graphene.Argument(
-        graphene.String,
+        graphene.Date,
         description="Set the end date in a date range select.",
         required=False,
     ),
