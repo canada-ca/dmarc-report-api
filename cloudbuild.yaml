@@ -65,4 +65,4 @@ steps:
     - 'platform'
     - 'managed'
   images:
-    - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/dmarc-report-api:$BRANCH_NAME-$SHORT_SHA'
