@@ -17,11 +17,16 @@ get_dmarc_summary_by_period = graphene.Field(
     start_date=graphene.Argument(
         CustomDate,
         description="Set the start date in a date range select.",
-        required=False,
+        required=True,
     ),
     end_date=graphene.Argument(
         CustomDate,
         description="Set the end date in a date range select.",
+        required=True,
+    ),
+    thirty_days=graphene.Argument(
+        graphene.Boolean,
+        description="Used if user is selecting last 30 days",
         required=False,
     ),
     description="Summarized DMARC aggregate reports",

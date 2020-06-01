@@ -22,9 +22,7 @@ class CustomDate(Scalar):
             raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not CUSTOM_DATE_REGEX.search(value.lower()):
-            raise GraphQLError(
-                "Value is not a valid Date : " + str(value)
-            )
+            raise GraphQLError("Value is not a valid Date : " + str(value))
 
         return value
 
@@ -34,9 +32,7 @@ class CustomDate(Scalar):
             raise GraphQLError("Value is not a valid String : " + str(value))
 
         if not CUSTOM_DATE_REGEX.search(value.lower()):
-            raise GraphQLError(
-                "Value is not a valid Date : " + str(value)
-            )
+            raise GraphQLError("Value is not a valid Date : " + str(value))
 
         return value
 
@@ -44,13 +40,10 @@ class CustomDate(Scalar):
     def parse_literal(node):
         if not isinstance(node, ast.StringValue):
             raise GraphQLError(
-                "Can only validate strings as date's but got a : "
-                + str(type(node))
+                "Can only validate strings as date's but got a : " + str(type(node))
             )
 
         if not CUSTOM_DATE_REGEX.search(node.value.lower()):
-            raise GraphQLError(
-                "Value is not a valid Date : " + str(node.value)
-            )
+            raise GraphQLError("Value is not a valid Date : " + str(node.value))
 
         return node.value

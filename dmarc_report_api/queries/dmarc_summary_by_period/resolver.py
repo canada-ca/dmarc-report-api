@@ -22,6 +22,7 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPerio
     domain = cleanse_input(kwargs.get("domain", None))
     start_date = cleanse_input(kwargs.get("start_date", None))
     end_date = cleanse_input(kwargs.get("end_date", None))
+    thirty_days = cleanse_input(kwargs.get("thirty_days", False))
 
     if domain is None:
         raise GraphQLError("Error, domain was not supplied")
@@ -37,7 +38,7 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPerio
         raise GraphQLError("Error, start date cannot be greater then end date")
 
     summary = fetch_summary(
-        domain=domain, start_date=start_date, end_date=end_date
+        domain=domain, start_date=start_date, end_date=end_date, thirty_days=thirty_days
     )
 
     if not len(summary.get("periods")):

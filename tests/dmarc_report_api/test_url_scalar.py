@@ -51,6 +51,9 @@ def test_invalid_url_parse_literal_not_url():
 def test_invalid_url_parse_literal_wrong_ast_type():
     test_value = ast.IntValue(value="1234")
     with pytest.raises(
-        GraphQLError, match=("Can only validate strings as URL's but got a : " + str(type(test_value)))
+        GraphQLError,
+        match=(
+            "Can only validate strings as URL's but got a : " + str(type(test_value))
+        ),
     ):
         URL.parse_literal(test_value)

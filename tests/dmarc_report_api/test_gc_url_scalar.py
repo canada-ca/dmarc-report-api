@@ -157,12 +157,14 @@ def test_valid_url_parse_value_gc_collab_with_subdomain():
 
 
 def test_valid_url_parse_literal_gc_collab_with_subdomain():
-    assert GCURL.parse_literal(ast.StringValue(value="test.gccollab.ca"))\
+    assert GCURL.parse_literal(ast.StringValue(value="test.gccollab.ca"))
 
 
 def test_invalid_url_serialize_not_url():
     test_value = "This Will Fail"
-    with pytest.raises(GraphQLError, match="Value is not a valid GC URL : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid GC URL : This Will Fail"
+    ):
         GCURL.serialize(test_value)
 
 
@@ -174,7 +176,9 @@ def test_invalid_url_serialize_wrong_type():
 
 def test_invalid_url_parse_value_not_url():
     test_value = "This Will Fail"
-    with pytest.raises(GraphQLError, match="Value is not a valid GC URL : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid GC URL : This Will Fail"
+    ):
         GCURL.parse_value(test_value)
 
 
@@ -186,13 +190,18 @@ def test_invalid_url_parse_value_wrong_type():
 
 def test_invalid_url_parse_literal_not_url():
     test_value = ast.StringValue(value="This Will Fail")
-    with pytest.raises(GraphQLError, match="Value is not a valid GC URL : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid GC URL : This Will Fail"
+    ):
         GCURL.parse_literal(test_value)
 
 
 def test_invalid_url_parse_literal_wrong_ast_type():
     test_value = ast.IntValue(value="1234")
     with pytest.raises(
-        GraphQLError, match=("Can only validate strings as GC URL's but got a : " + str(type(test_value)))
+        GraphQLError,
+        match=(
+            "Can only validate strings as GC URL's but got a : " + str(type(test_value))
+        ),
     ):
         GCURL.parse_literal(test_value)

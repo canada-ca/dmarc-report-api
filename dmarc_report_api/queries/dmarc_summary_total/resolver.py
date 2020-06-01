@@ -35,9 +35,7 @@ def resolve_total_dmarc_summaries(self, info, **kwargs) -> DmarcSummaries:
     if start_date > end_date:
         raise GraphQLError("Error, start date cannot be greater then end date")
 
-    summaries = fetch_summary(
-        domain=domain, start_date=start_date, end_date=end_date
-    )
+    summaries = fetch_summary(domain=domain, start_date=start_date, end_date=end_date)
 
     if not len(summaries.get("periods")):
         raise GraphQLError(

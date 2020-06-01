@@ -20,7 +20,9 @@ def test_valid_date_parse_literal():
 
 def test_invalid_date_serialize_not_url():
     test_value = "This Will Fail"
-    with pytest.raises(GraphQLError, match="Value is not a valid Date : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid Date : This Will Fail"
+    ):
         CustomDate.serialize(test_value)
 
 
@@ -32,7 +34,9 @@ def test_invalid_date_serialize_wrong_type():
 
 def test_invalid_date_parse_value_not_url():
     test_value = "This Will Fail"
-    with pytest.raises(GraphQLError, match="Value is not a valid Date : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid Date : This Will Fail"
+    ):
         CustomDate.parse_value(test_value)
 
 
@@ -44,13 +48,18 @@ def test_invalid_date_parse_value_wrong_type():
 
 def test_invalid_date_parse_literal_not_url():
     test_value = ast.StringValue(value="This Will Fail")
-    with pytest.raises(GraphQLError, match="Value is not a valid Date : This Will Fail"):
+    with pytest.raises(
+        GraphQLError, match="Value is not a valid Date : This Will Fail"
+    ):
         CustomDate.parse_literal(test_value)
 
 
 def test_invalid_date_parse_literal_wrong_ast_type():
     test_value = ast.IntValue(value="1234")
     with pytest.raises(
-        GraphQLError, match=("Can only validate strings as date's but got a : " + str(type(test_value)))
+        GraphQLError,
+        match=(
+            "Can only validate strings as date's but got a : " + str(type(test_value))
+        ),
     ):
         CustomDate.parse_literal(test_value)
