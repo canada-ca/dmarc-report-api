@@ -120,7 +120,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_start_date(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_by_period.resolver.fetch_summary",
         autospec=True,
-        return_value=[],
+        return_value={"id": None, "periods": {}},
     )
 
     query = """
@@ -216,7 +216,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_end_date(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_by_period.resolver.fetch_summary",
         autospec=True,
-        return_value=[],
+        return_value={"id": None, "periods": {}},
     )
 
     query = """
@@ -312,7 +312,7 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_domain(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_by_period.resolver.fetch_summary",
         autospec=True,
-        return_value=[],
+        return_value={"id": None, "periods": {}},
     )
 
     query = """

@@ -117,7 +117,7 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
         autospec=True,
-        return_value=[],
+        return_value={"id": None, "periods": {}},
     )
 
     query = """
@@ -213,7 +213,7 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     mocker.patch(
         "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
         autospec=True,
-        return_value=[],
+        return_value={"id": None, "periods": {}},
     )
 
     query = """

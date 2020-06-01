@@ -40,7 +40,7 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPerio
         domain=domain, start_date=start_date, end_date=end_date
     )
 
-    if not summary:
+    if not len(summary.get("periods")):
         raise GraphQLError(
             "Error, there is no data for that time period, or domain is incorrect"
         )
