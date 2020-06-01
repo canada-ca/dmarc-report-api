@@ -37,7 +37,7 @@ def resolve_dmarc_summary_by_period(self, info, **kwargs) -> DmarcSummaryByPerio
         raise GraphQLError("Error, start date cannot be greater then end date")
 
     summary = fetch_summary(
-        domain=domain, start_date=start_date, end_date=end_date, periods=False
+        domain=domain, start_date=start_date, end_date=end_date
     )
 
     if not summary:

@@ -7,17 +7,12 @@ DATABASE_NAME = os.getenv("DATABASE")
 SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
 
 
-def fetch_summary(domain, start_date, end_date, periods):
+def fetch_summary(domain, start_date, end_date):
     summaries_client = create_azure_clients(container=SUMMARIES_CONTAINER)
 
-    if periods:
-        query = """SELECT l.start_date, l.end_date, l.top_senders, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date >= '{start_date}' AND l.end_date <= '{end_date}' """.format(
-                domain=domain, start_date=str(start_date), end_date=str(end_date)
-            )
-    else:
-        query = """SELECT l.start_date, l.end_date, l.top_senders, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date = '{start_date}' AND l.end_date = '{end_date}'""".format(
-                domain=domain, start_date=str(start_date), end_date=str(end_date)
-            )
+    query = """SELECT l.start_date, l.end_date, l.top_senders, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date >= '{start_date}' AND l.end_date <= '{end_date}' """.format(
+            domain=domain, start_date=str(start_date), end_date=str(end_date)
+        )
 
     try:
         reports = summaries_client.query_items(query)
