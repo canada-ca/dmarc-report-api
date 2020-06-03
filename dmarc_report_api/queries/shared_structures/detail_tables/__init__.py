@@ -1,11 +1,11 @@
 import graphene
 
-from dmarc_report_api.queries.dmarc_summary_total.top_senders.top_sender_structure import (
+from dmarc_report_api.queries.shared_structures.detail_tables.detail_tables import (
     TopSenderStructure,
 )
 
 
-class TopSenders(graphene.ObjectType):
+class DetailTables(graphene.ObjectType):
     """
     Object that contains the top senders for each category
     """

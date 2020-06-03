@@ -6,7 +6,7 @@ expected_results = {
                 {
                     "startDate": "2020-04-11",
                     "endDate": "2020-05-11",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -26,7 +26,7 @@ expected_results = {
                 {
                     "startDate": "2020-05-01",
                     "endDate": "2020-05-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -46,35 +46,62 @@ expected_results = {
                 {
                     "startDate": "2020-04-01",
                     "endDate": "2020-04-30",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [
                             {
                                 "sourceIpAddress": "12.34.567.891",
+                                "envelopeFrom": "test.email.domain.ca",
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000,
+                                "totalMessages": 1000,
+                                "countryCode": "CA",
+                                "ispOrg": "Test ISP",
+                                "prefixOrg": "Test ISP",
+                                "asName": "TISP",
+                                "asNum": 5342,
+                                "asOrg": "Some Org",
+                                "dnsHost": "dns.host.ca",
+                                "dnsDomain": "dns.domain.ca",
                             }
                         ],
                         "dkimFailure": [
                             {
                                 "sourceIpAddress": "12.34.567.891",
+                                "envelopeFrom": "test.email.domain.ca",
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000,
+                                "totalMessages": 1000,
+                                "countryCode": "CA",
+                                "ispOrg": "Test ISP",
+                                "prefixOrg": "Test ISP",
+                                "asName": "TISP",
+                                "asNum": 5342,
+                                "asOrg": "Some Org",
+                                "dnsHost": "dns.host.ca",
+                                "dnsDomain": "dns.domain.ca",
                             }
                         ],
                         "dkimMisaligned": [],
                         "dmarcFailure": [
                             {
                                 "sourceIpAddress": "12.34.567.891",
+                                "envelopeFrom": "test.email.domain.ca",
                                 "spfDomains": "test.email.domain.ca",
                                 "dkimDomains": "",
                                 "dkimSelectors": "",
-                                "total": 1000,
+                                "totalMessages": 1000,
+                                "countryCode": "CA",
+                                "ispOrg": "Test ISP",
+                                "prefixOrg": "Test ISP",
+                                "asName": "TISP",
+                                "asNum": 5342,
+                                "asOrg": "Some Org",
+                                "dnsHost": "dns.host.ca",
+                                "dnsDomain": "dns.domain.ca",
                             }
                         ],
                     },
@@ -90,7 +117,7 @@ expected_results = {
                 {
                     "startDate": "2020-03-01",
                     "endDate": "2020-03-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -110,7 +137,7 @@ expected_results = {
                 {
                     "startDate": "2020-02-01",
                     "endDate": "2020-02-29",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -130,7 +157,7 @@ expected_results = {
                 {
                     "startDate": "2020-01-01",
                     "endDate": "2020-01-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -150,7 +177,7 @@ expected_results = {
                 {
                     "startDate": "2019-12-01",
                     "endDate": "2019-12-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -170,7 +197,7 @@ expected_results = {
                 {
                     "startDate": "2019-11-01",
                     "endDate": "2019-11-30",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -190,7 +217,7 @@ expected_results = {
                 {
                     "startDate": "2019-10-01",
                     "endDate": "2019-10-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -210,7 +237,7 @@ expected_results = {
                 {
                     "startDate": "2019-09-01",
                     "endDate": "2019-09-30",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -230,7 +257,7 @@ expected_results = {
                 {
                     "startDate": "2019-08-01",
                     "endDate": "2019-08-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -250,7 +277,7 @@ expected_results = {
                 {
                     "startDate": "2019-07-01",
                     "endDate": "2019-07-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -270,7 +297,7 @@ expected_results = {
                 {
                     "startDate": "2019-06-01",
                     "endDate": "2019-06-30",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],
@@ -290,7 +317,7 @@ expected_results = {
                 {
                     "startDate": "2019-05-01",
                     "endDate": "2019-05-31",
-                    "topSenders": {
+                    "detailTables": {
                         "fullPass": [],
                         "spfFailure": [],
                         "spfMisaligned": [],

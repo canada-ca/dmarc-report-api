@@ -41,48 +41,102 @@ def test_valid_query_get_dmarc_total(mocker):
             periods {
                 startDate
                 endDate
-                topSenders {
+                detailTables {
                     fullPass {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dmarcFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                 }
                 categoryTotals {
@@ -131,48 +185,102 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
             periods {
                 startDate
                 endDate
-                topSenders {
+                detailTables {
                     fullPass {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dmarcFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                 }
                 categoryTotals {
@@ -227,48 +335,102 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
             periods {
                 startDate
                 endDate
-                topSenders {
+                detailTables {
                     fullPass {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dmarcFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                 }
                 categoryTotals {

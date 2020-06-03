@@ -1,5 +1,5 @@
 import graphene
-from dmarc_report_api.queries.dmarc_summary_by_period.period import Period
+from dmarc_report_api.queries.shared_structures.period import Period
 
 
 class DmarcSummaries(graphene.ObjectType):

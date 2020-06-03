@@ -43,48 +43,102 @@ def test_valid_query_get_dmarc_summary_by_period(mocker):
             period {
                 startDate
                 endDate
-                topSenders {
+                detailTables {
                     fullPass {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     spfMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dkimMisaligned {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                     dmarcFailure {
                         sourceIpAddress
+                        envelopeFrom
                         spfDomains
                         dkimDomains
                         dkimSelectors
-                        total
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
                 }
                 categoryTotals {
@@ -124,72 +178,126 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_start_date(mocker):
     )
 
     query = """
-        {
-            getDmarcSummaryByPeriod (
-                domain: "test.domain.gc.ca"
-                startDate: "2020-04-05"
-                endDate: "2020-04-30"
-            ) {
-                id
-                period {
-                    startDate
-                    endDate
-                    topSenders {
-                        fullPass {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dmarcFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
+    {
+        getDmarcSummaryByPeriod (
+            domain: "test.domain.gc.ca"
+            startDate: "2020-04-05"
+            endDate: "2020-04-30"
+        ) {
+            id
+            period {
+                startDate
+                endDate
+                detailTables {
+                    fullPass {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
-                    categoryTotals {
-                        dmarcFailNone
-                        dmarcFailQuarantine
-                        dmarcFailReject
-                        spfFailDkimPass
-                        spfPassDkimFail
-                        spfPassDkimPass
+                    spfFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
+                    spfMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dmarcFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                }
+                categoryTotals {
+                    dmarcFailNone
+                    dmarcFailQuarantine
+                    dmarcFailReject
+                    spfFailDkimPass
+                    spfPassDkimFail
+                    spfPassDkimPass
                 }
             }
         }
-        """
+    }
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
@@ -220,72 +328,126 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_end_date(mocker):
     )
 
     query = """
-        {
-            getDmarcSummaryByPeriod (
-                domain: "test.domain.gc.ca"
-                startDate: "2020-04-01"
-                endDate: "2020-04-25"
-            ) {
-                id
-                period {
-                    startDate
-                    endDate
-                    topSenders {
-                        fullPass {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dmarcFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
+    {
+        getDmarcSummaryByPeriod (
+            domain: "test.domain.gc.ca"
+            startDate: "2020-04-01"
+            endDate: "2020-04-25"
+        ) {
+            id
+            period {
+                startDate
+                endDate
+                detailTables {
+                    fullPass {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
-                    categoryTotals {
-                        dmarcFailNone
-                        dmarcFailQuarantine
-                        dmarcFailReject
-                        spfFailDkimPass
-                        spfPassDkimFail
-                        spfPassDkimPass
+                    spfFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
+                    spfMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dmarcFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                }
+                categoryTotals {
+                    dmarcFailNone
+                    dmarcFailQuarantine
+                    dmarcFailReject
+                    spfFailDkimPass
+                    spfPassDkimFail
+                    spfPassDkimPass
                 }
             }
         }
-        """
+    }
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 
@@ -316,72 +478,126 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_domain(mocker):
     )
 
     query = """
-        {
-            getDmarcSummaryByPeriod (
-                domain: "this.domain.does.not.exist.gc.ca"
-                startDate: "2020-04-01"
-                endDate: "2020-04-30"
-            ) {
-                id
-                period {
-                    startDate
-                    endDate
-                    topSenders {
-                        fullPass {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        spfMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dkimMisaligned {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
-                        dmarcFailure {
-                            sourceIpAddress
-                            spfDomains
-                            dkimDomains
-                            dkimSelectors
-                            total
-                        }
+    {
+        getDmarcSummaryByPeriod (
+            domain: "this.domain.does.not.exist.gc.ca"
+            startDate: "2020-04-01"
+            endDate: "2020-04-30"
+        ) {
+            id
+            period {
+                startDate
+                endDate
+                detailTables {
+                    fullPass {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
-                    categoryTotals {
-                        dmarcFailNone
-                        dmarcFailQuarantine
-                        dmarcFailReject
-                        spfFailDkimPass
-                        spfPassDkimFail
-                        spfPassDkimPass
+                    spfFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
                     }
+                    spfMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dkimMisaligned {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                    dmarcFailure {
+                        sourceIpAddress
+                        envelopeFrom
+                        spfDomains
+                        dkimDomains
+                        dkimSelectors
+                        totalMessages
+                        countryCode
+                        ispOrg
+                        prefixOrg
+                        asName
+                        asNum
+                        asOrg
+                        dnsHost
+                        dnsDomain
+                    }
+                }
+                categoryTotals {
+                    dmarcFailNone
+                    dmarcFailQuarantine
+                    dmarcFailReject
+                    spfFailDkimPass
+                    spfPassDkimFail
+                    spfPassDkimPass
                 }
             }
         }
-        """
+    }
+    """
 
     executed = Client(schema=schema).execute(query, context_value=auth_header())
 

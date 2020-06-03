@@ -1,5 +1,3 @@
-import datetime
-
 from graphql import GraphQLError
 
 from dmarc_report_api.queries.dmarc_summary_total.dmarc_summaries import DmarcSummaries

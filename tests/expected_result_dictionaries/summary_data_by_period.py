@@ -5,35 +5,62 @@ expected_summary_period_data = {
             "period": {
                 "startDate": "2020-04-01",
                 "endDate": "2020-04-30",
-                "topSenders": {
+                "detailTables": {
                     "fullPass": [],
                     "spfFailure": [],
                     "spfMisaligned": [
                         {
                             "sourceIpAddress": "12.34.567.891",
+                            "envelopeFrom": "test.email.domain.ca",
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000,
+                            "totalMessages": 1000,
+                            "countryCode": "CA",
+                            "ispOrg": "Test ISP",
+                            "prefixOrg": "Test ISP",
+                            "asName": "TISP",
+                            "asNum": 5342,
+                            "asOrg": "Some Org",
+                            "dnsHost": "dns.host.ca",
+                            "dnsDomain": "dns.domain.ca",
                         }
                     ],
                     "dkimFailure": [
                         {
                             "sourceIpAddress": "12.34.567.891",
+                            "envelopeFrom": "test.email.domain.ca",
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000,
+                            "totalMessages": 1000,
+                            "countryCode": "CA",
+                            "ispOrg": "Test ISP",
+                            "prefixOrg": "Test ISP",
+                            "asName": "TISP",
+                            "asNum": 5342,
+                            "asOrg": "Some Org",
+                            "dnsHost": "dns.host.ca",
+                            "dnsDomain": "dns.domain.ca",
                         }
                     ],
                     "dkimMisaligned": [],
                     "dmarcFailure": [
                         {
                             "sourceIpAddress": "12.34.567.891",
+                            "envelopeFrom": "test.email.domain.ca",
                             "spfDomains": "test.email.domain.ca",
                             "dkimDomains": "",
                             "dkimSelectors": "",
-                            "total": 1000,
+                            "totalMessages": 1000,
+                            "countryCode": "CA",
+                            "ispOrg": "Test ISP",
+                            "prefixOrg": "Test ISP",
+                            "asName": "TISP",
+                            "asNum": 5342,
+                            "asOrg": "Some Org",
+                            "dnsHost": "dns.host.ca",
+                            "dnsDomain": "dns.domain.ca",
                         }
                     ],
                 },
