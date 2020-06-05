@@ -1,6 +1,8 @@
 from graphql import GraphQLError
 
-from dmarc_report_api.queries.dmarc_summary_total.dmarc_summaries import DmarcSummaries
+from dmarc_report_api.queries.yearly_dmarc_summaries.yearly_dmarc_summaries import (
+    DmarcSummaries,
+)
 from dmarc_report_api.data.fetch_dmarc_summaries import fetch_summary
 from dmarc_report_api.shared_functions import cleanse_input
 from dmarc_report_api.auth import require_token

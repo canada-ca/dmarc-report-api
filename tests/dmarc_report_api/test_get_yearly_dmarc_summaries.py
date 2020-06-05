@@ -1,6 +1,4 @@
 import os
-import pytest
-import pytest_mock
 
 from flask import Request
 from graphene.test import Client
@@ -10,8 +8,10 @@ from werkzeug.test import create_environ
 
 from dmarc_report_api.schema import schema
 from scripts.jwt_gen import jwt_gen
-from tests.mock_data.mock_total_dmarc_summaries import mock_data
-from tests.expected_result_dictionaries.summaries_total_data import expected_results
+from tests.test_data.get_yearly_dmarc_summaries import (
+    mock_data,
+    expected_results,
+)
 
 
 def auth_header():
@@ -25,14 +25,14 @@ def test_valid_query_get_dmarc_total(mocker):
     Test to see if the getTotalDmarcSummaries query works
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
+        "dmarc_report_api.queries.yearly_dmarc_summaries.resolver.fetch_summary",
         autospec=True,
         return_value=mock_data,
     )
 
     query = """
     {
-        getTotalDmarcSummaries (
+        getYearlyDmarcSummaries (
             domain: "test.domain.gc.ca"
             startDate: "1970-01-01"
             endDate: "2070-01-01"
@@ -169,14 +169,14 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
     Test to see if error appears for query in date range that does not exist
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
+        "dmarc_report_api.queries.yearly_dmarc_summaries.resolver.fetch_summary",
         autospec=True,
         return_value={"id": None, "periods": {}},
     )
 
     query = """
     {
-        getTotalDmarcSummaries (
+        getYearlyDmarcSummaries (
             domain: "test.domain.gc.ca"
             startDate: "1970-01-01"
             endDate: "2000-01-01"
@@ -319,14 +319,14 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
     domain
     """
     mocker.patch(
-        "dmarc_report_api.queries.dmarc_summary_total.resolver.fetch_summary",
+        "dmarc_report_api.queries.yearly_dmarc_summaries.resolver.fetch_summary",
         autospec=True,
         return_value={"id": None, "periods": {}},
     )
 
     query = """
     {
-        getTotalDmarcSummaries (
+        getYearlyDmarcSummaries (
             domain: "domain.does.not.work.gc.ca"
             startDate: "1970-01-01"
             endDate: "2070-01-01"

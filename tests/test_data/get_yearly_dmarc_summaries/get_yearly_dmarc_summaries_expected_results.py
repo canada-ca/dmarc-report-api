@@ -1,6 +1,6 @@
 expected_results = {
     "data": {
-        "getTotalDmarcSummaries": {
+        "getYearlyDmarcSummaries": {
             "id": "test.domain.canada.ca",
             "periods": [
                 {

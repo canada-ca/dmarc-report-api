@@ -1,7 +1,6 @@
 import graphene
 
-from dmarc_report_api.queries.ip_enrichment import get_ip_enrichment_data
-from dmarc_report_api.queries.dmarc_summary_total import get_total_dmarc_summaries
+from dmarc_report_api.queries.yearly_dmarc_summaries import get_yearly_dmarc_summaries
 from dmarc_report_api.queries.dmarc_summary_by_period import get_dmarc_summary_by_period
 
 
@@ -10,9 +9,7 @@ class Query(graphene.ObjectType):
     get_dmarc_summary_by_period = get_dmarc_summary_by_period
 
     # Get all dmarc summaries query object
-    get_total_dmarc_summaries = get_total_dmarc_summaries
-
-    get_ip_enrichment_data = get_ip_enrichment_data
+    get_yearly_dmarc_summaries = get_yearly_dmarc_summaries
 
 
 schema = graphene.Schema(query=Query)

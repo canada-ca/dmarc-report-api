@@ -1,6 +1,4 @@
 import os
-import pytest
-import pytest_mock
 
 from flask import Request
 from graphene.test import Client
@@ -10,8 +8,8 @@ from werkzeug.test import create_environ
 
 from dmarc_report_api.schema import schema
 from scripts.jwt_gen import jwt_gen
-from tests.mock_data.mock_dmarc_summary_by_period import mock_data
-from tests.expected_result_dictionaries.summary_data_by_period import (
+from tests.test_data.get_dmarc_summary_by_period import (
+    mock_data,
     expected_summary_period_data,
 )
 

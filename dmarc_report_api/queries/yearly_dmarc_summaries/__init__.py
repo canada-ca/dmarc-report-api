@@ -1,13 +1,15 @@
 import graphene
 
-from dmarc_report_api.queries.dmarc_summary_total.resolver import (
+from dmarc_report_api.queries.yearly_dmarc_summaries.resolver import (
     resolve_total_dmarc_summaries,
 )
 from dmarc_report_api.scalars import CustomDate, GCURL
-from dmarc_report_api.queries.dmarc_summary_total.dmarc_summaries import DmarcSummaries
+from dmarc_report_api.queries.yearly_dmarc_summaries.yearly_dmarc_summaries import (
+    DmarcSummaries,
+)
 
 
-get_total_dmarc_summaries = graphene.Field(
+get_yearly_dmarc_summaries = graphene.Field(
     lambda: DmarcSummaries,
     domain=graphene.Argument(
         GCURL, description="Domain used to select reports", required=True
