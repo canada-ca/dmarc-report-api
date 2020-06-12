@@ -63,16 +63,7 @@ mock_data = {
                     }
                 ],
             },
-            "category_totals": {
-                "dmarc-fail-none": 1000,
-                "arc-pass": 0,
-                "dmarc-fail-quarantine": 0,
-                "spf-pass/dkim-fail": 0,
-                "forwarded": 0,
-                "dmarc-fail-reject": 0,
-                "spf-fail/dkim-pass": 0,
-                "spf-pass/dkim-pass": 0,
-            },
+            "category_totals": {"partial-pass": 2000, "pass": 0, "fail": 1000},
         }
     ],
 }

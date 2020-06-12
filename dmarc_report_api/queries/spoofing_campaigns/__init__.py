@@ -1,6 +1,8 @@
 import graphene
 
-from dmarc_report_api.queries.spoofing_campaigns.resolver import resolve_spoofing_campaigns
+from dmarc_report_api.queries.spoofing_campaigns.resolver import (
+    resolve_spoofing_campaigns,
+)
 from dmarc_report_api.queries.spoofing_campaigns.spoofing_campaigns import Campaigns
 from dmarc_report_api.scalars import GCURL
 

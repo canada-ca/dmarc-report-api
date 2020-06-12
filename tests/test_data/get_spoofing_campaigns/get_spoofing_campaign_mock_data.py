@@ -15,7 +15,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -30,7 +30,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -45,7 +45,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -60,7 +60,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -75,7 +75,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -90,7 +90,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -105,7 +105,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -120,7 +120,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -135,7 +135,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -150,7 +150,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -165,7 +165,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -180,7 +180,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -195,7 +195,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -210,7 +210,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -225,7 +225,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -240,7 +240,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -255,7 +255,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -270,7 +270,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -285,7 +285,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -300,7 +300,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -315,7 +315,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -330,7 +330,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -345,7 +345,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -360,7 +360,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -375,7 +375,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -390,7 +390,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -405,7 +405,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -420,7 +420,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -435,7 +435,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -450,7 +450,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -465,7 +465,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -480,7 +480,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -495,7 +495,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -510,7 +510,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -525,7 +525,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -540,7 +540,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -555,7 +555,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -570,8 +570,8 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
-            }
+                "dns_domain": "example.com",
+            },
         ],
         [
             {
@@ -587,7 +587,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -602,7 +602,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -617,7 +617,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -632,7 +632,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -647,7 +647,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -662,7 +662,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -677,7 +677,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -692,7 +692,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -707,7 +707,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -722,7 +722,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -737,7 +737,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -752,7 +752,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -767,7 +767,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -782,7 +782,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -797,7 +797,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -812,7 +812,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -827,7 +827,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -842,7 +842,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -857,7 +857,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -872,7 +872,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -887,7 +887,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -902,7 +902,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -917,7 +917,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -932,7 +932,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -947,7 +947,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -962,7 +962,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -977,7 +977,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -992,7 +992,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -1007,7 +1007,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -1022,7 +1022,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -1037,7 +1037,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -1052,7 +1052,7 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
+                "dns_domain": "example.com",
             },
             {
                 "report_end_date": "2020-01-1 12:00:00",
@@ -1067,8 +1067,8 @@ mock_data = {
                 "as_num": 1234,
                 "as_org": "Some Bad Actor",
                 "dns_host": "some.bad.dns.domain.com",
-                "dns_domain": "example.com"
-            }
-        ]
-    ]
+                "dns_domain": "example.com",
+            },
+        ],
+    ],
 }

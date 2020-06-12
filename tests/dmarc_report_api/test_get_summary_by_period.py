@@ -140,12 +140,9 @@ def test_valid_query_get_dmarc_summary_by_period(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }
@@ -285,12 +282,9 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_start_date(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }
@@ -435,12 +429,9 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_end_date(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }
@@ -585,12 +576,9 @@ def test_invalid_query_get_dmarc_summary_by_period_incorrect_domain(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }

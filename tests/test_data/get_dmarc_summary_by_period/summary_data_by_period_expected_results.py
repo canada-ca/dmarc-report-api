@@ -64,14 +64,7 @@ expected_summary_period_data = {
                         }
                     ],
                 },
-                "categoryTotals": {
-                    "dmarcFailNone": 1000,
-                    "dmarcFailQuarantine": 0,
-                    "dmarcFailReject": 0,
-                    "spfFailDkimPass": 0,
-                    "spfPassDkimFail": 0,
-                    "spfPassDkimPass": 0,
-                },
+                "categoryTotals": {"partialPass": 2000, "fullPass": 0, "fail": 1000},
             },
         }
     }

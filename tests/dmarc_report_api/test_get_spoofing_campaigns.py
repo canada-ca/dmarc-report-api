@@ -110,6 +110,4 @@ def test_invalid_query_get_spoofing_campaigns_incorrect_domain(mocker):
     errors, data = executed.values()
     [first] = errors
     expected_message = first["message"]
-    assert (
-        expected_message == "Error, there is no spoofing campaigns for that domain."
-    )
+    assert expected_message == "Error, there is no spoofing campaigns for that domain."

@@ -23,7 +23,4 @@ def fetch_campaigns(domain):
     except Exception as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
-    return {
-        "id": id_list[0].get("id", None),
-        "campaigns": id_list[0].get("campaigns")
-    }
+    return {"id": id_list[0].get("id", None), "campaigns": id_list[0].get("campaigns")}

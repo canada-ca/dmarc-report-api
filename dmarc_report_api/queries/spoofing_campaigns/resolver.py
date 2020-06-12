@@ -1,9 +1,7 @@
 import datetime
 from graphql import GraphQLError
 
-from dmarc_report_api.queries.spoofing_campaigns.spoofing_campaigns import (
-    Campaigns,
-)
+from dmarc_report_api.queries.spoofing_campaigns.spoofing_campaigns import Campaigns
 from dmarc_report_api.data.fetch_spoofing_campaigns import fetch_campaigns
 from dmarc_report_api.shared_functions import cleanse_input
 from dmarc_report_api.auth import require_token
@@ -24,13 +22,9 @@ def resolve_spoofing_campaigns(self, info, **kwargs) -> Campaigns:
     if domain is None:
         raise GraphQLError("Error, domain was not supplied")
 
-    summary = fetch_campaigns(
-        domain=domain
-    )
+    summary = fetch_campaigns(domain=domain)
 
     if not len(summary.get("campaigns")):
-        raise GraphQLError(
-            "Error, there is no spoofing campaigns for that domain."
-        )
+        raise GraphQLError("Error, there is no spoofing campaigns for that domain.")
 
     return Campaigns(summary.get("id"), summary["campaigns"])

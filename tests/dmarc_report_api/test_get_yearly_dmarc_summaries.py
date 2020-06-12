@@ -140,12 +140,9 @@ def test_valid_query_get_dmarc_total(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }
@@ -284,12 +281,9 @@ def test_invalid_query_get_total_dmarc_summaries_no_data_in_range(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }
@@ -434,12 +428,9 @@ def test_invalid_query_get_total_dmarc_summaries_incorrect_domain(mocker):
                     }
                 }
                 categoryTotals {
-                    dmarcFailNone
-                    dmarcFailQuarantine
-                    dmarcFailReject
-                    spfFailDkimPass
-                    spfPassDkimFail
-                    spfPassDkimPass
+                    partialPass
+                    fullPass
+                    fail
                 }
             }
         }

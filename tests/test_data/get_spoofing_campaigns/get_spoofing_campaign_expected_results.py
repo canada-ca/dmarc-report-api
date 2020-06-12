@@ -17,7 +17,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -32,7 +32,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -47,7 +47,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -62,7 +62,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -77,7 +77,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -92,7 +92,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -107,7 +107,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -122,7 +122,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -137,7 +137,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -152,7 +152,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -167,7 +167,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -182,7 +182,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -197,7 +197,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -212,7 +212,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -227,7 +227,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -242,7 +242,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -257,7 +257,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -272,7 +272,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -287,7 +287,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -302,7 +302,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -317,7 +317,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -332,7 +332,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -347,7 +347,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -362,7 +362,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -377,7 +377,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -392,7 +392,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -407,7 +407,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -422,7 +422,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -437,7 +437,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -452,7 +452,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -467,7 +467,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -482,7 +482,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -497,7 +497,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -512,7 +512,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -527,7 +527,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -542,7 +542,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -557,7 +557,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -572,8 +572,8 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
-                    }
+                        "dnsDomain": "example.com",
+                    },
                 ],
                 [
                     {
@@ -589,7 +589,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -604,7 +604,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -619,7 +619,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -634,7 +634,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -649,7 +649,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -664,7 +664,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -679,7 +679,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -694,7 +694,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -709,7 +709,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -724,7 +724,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -739,7 +739,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -754,7 +754,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -769,7 +769,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -784,7 +784,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -799,7 +799,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -814,7 +814,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -829,7 +829,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -844,7 +844,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -859,7 +859,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -874,7 +874,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -889,7 +889,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -904,7 +904,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -919,7 +919,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -934,7 +934,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -949,7 +949,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -964,7 +964,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -979,7 +979,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -994,7 +994,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -1009,7 +1009,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -1024,7 +1024,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -1039,7 +1039,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -1054,7 +1054,7 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
+                        "dnsDomain": "example.com",
                     },
                     {
                         "reportEndDate": "2020-01-1 12:00:00",
@@ -1069,10 +1069,10 @@ expected_results = {
                         "asNum": 1234,
                         "asOrg": "Some Bad Actor",
                         "dnsHost": "some.bad.dns.domain.com",
-                        "dnsDomain": "example.com"
-                    }
-                ]
-            ]
+                        "dnsDomain": "example.com",
+                    },
+                ],
+            ],
         }
     }
 }

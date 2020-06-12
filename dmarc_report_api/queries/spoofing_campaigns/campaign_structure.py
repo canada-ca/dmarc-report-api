@@ -5,6 +5,7 @@ class CampaignStructure(graphene.ObjectType):
     """
 
     """
+
     report_end_date = graphene.String(description="")
     header_from = graphene.String(description="")
     envelope_from = graphene.String(description="")
