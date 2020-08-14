@@ -40,4 +40,7 @@ def fetch_summary(domain, start_date, end_date, thirty_days=False):
     except Exception as e:
         raise GraphQLError("Cosmos Error: " + str(e))
 
-    return {"id": id_list[0].get("id", None), "periods": rtr_list}
+    if len(id_list) > 0:
+        return {"id": id_list[0].get("id", None), "periods": rtr_list}
+    else:
+        return {"id": None, "periods": rtr_list}
