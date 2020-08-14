@@ -14,7 +14,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2020-05-01",
@@ -27,7 +32,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2020-04-01",
@@ -92,7 +102,8 @@ expected_results = {
                         ],
                     },
                     "categoryTotals": {
-                        "partialPass": 2000,
+                        "passDkimOnly": 1000,
+                        "passSpfOnly": 1000,
                         "fullPass": 0,
                         "fail": 1000,
                     },
@@ -108,7 +119,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2020-02-01",
@@ -121,7 +137,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2020-01-01",
@@ -134,7 +155,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-12-01",
@@ -147,7 +173,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-11-01",
@@ -160,7 +191,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-10-01",
@@ -173,7 +209,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-09-01",
@@ -186,7 +227,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-08-01",
@@ -199,7 +245,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-07-01",
@@ -212,7 +263,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-06-01",
@@ -225,7 +281,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
                 {
                     "startDate": "2019-05-01",
@@ -238,7 +299,12 @@ expected_results = {
                         "dkimMisaligned": [],
                         "dmarcFailure": [],
                     },
-                    "categoryTotals": {"partialPass": 0, "fullPass": 0, "fail": 0},
+                    "categoryTotals": {
+                        "passDkimOnly": 0,
+                        "passSpfOnly": 0,
+                        "fullPass": 0,
+                        "fail": 0,
+                    },
                 },
             ],
         }

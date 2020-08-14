@@ -12,7 +12,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2020-05-01",
@@ -25,7 +30,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2020-04-01",
@@ -89,7 +99,12 @@ mock_data = {
                     }
                 ],
             },
-            "category_totals": {"partial-pass": 2000, "pass": 0, "fail": 1000},
+            "category_totals": {
+                "pass-dkim-only": 1000,
+                "pass-spf-only": 1000,
+                "pass": 0,
+                "fail": 1000,
+            },
         },
         {
             "start_date": "2020-03-01",
@@ -102,7 +117,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2020-02-01",
@@ -115,7 +135,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2020-01-01",
@@ -128,7 +153,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-12-01",
@@ -141,7 +171,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-11-01",
@@ -154,7 +189,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-10-01",
@@ -167,7 +207,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-09-01",
@@ -180,7 +225,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-08-01",
@@ -193,7 +243,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-07-01",
@@ -206,7 +261,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-06-01",
@@ -219,7 +279,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
         {
             "start_date": "2019-05-01",
@@ -232,7 +297,12 @@ mock_data = {
                 "dkim_misaligned": [],
                 "dmarc_failure": [],
             },
-            "category_totals": {"partial-pass": 0, "pass": 0, "fail": 0},
+            "category_totals": {
+                "pass-dkim-only": 0,
+                "pass-spf-only": 0,
+                "pass": 0,
+                "fail": 0,
+            },
         },
     ],
 }
