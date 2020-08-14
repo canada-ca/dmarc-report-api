@@ -11,4 +11,4 @@ logs
 .idea/
 
 # PyTest Cache
-.pytest_cache
+.pytest_cache/

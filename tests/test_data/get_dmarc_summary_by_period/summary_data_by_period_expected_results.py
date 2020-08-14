@@ -64,7 +64,12 @@ expected_summary_period_data = {
                         }
                     ],
                 },
-                "categoryTotals": {"partialPass": 2000, "fullPass": 0, "fail": 1000},
+                "categoryTotals": {
+                    "passDkimOnly": 2000,
+                    "passSpfOnly": 1000,
+                    "fullPass": 0,
+                    "fail": 1000,
+                },
             },
         }
     }

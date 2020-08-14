@@ -63,7 +63,12 @@ mock_data = {
                     }
                 ],
             },
-            "category_totals": {"partial-pass": 2000, "pass": 0, "fail": 1000},
+            "category_totals": {
+                "pass-dkim-only": 2000,
+                "pass-spf-only": 1000,
+                "pass": 0,
+                "fail": 1000,
+            },
         }
     ],
 }
