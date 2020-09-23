@@ -10,7 +10,7 @@ SUMMARIES_CONTAINER = os.getenv("SUMMARIES_CONTAINER")
 def fetch_summary(domain, start_date, end_date, thirty_days=False):
     summaries_client = create_azure_clients(container=SUMMARIES_CONTAINER)
     if thirty_days == "True":
-        query = """SELECT l.start_date, l.end_date, l.detail_tables, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.start_date = '{start_date}' AND l.end_date = '{end_date}' AND l.thirty_days = true""".format(
+        query = """SELECT l.start_date, l.end_date, l.detail_tables, l.category_totals FROM c JOIN l IN c.periods WHERE c.id = '{domain}' AND l.thirty_days = true""".format(
             domain=domain, start_date=str(start_date), end_date=str(end_date)
         )
     else:
