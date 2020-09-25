@@ -3,7 +3,7 @@ from graphene.types import Scalar
 from graphql.language import ast
 from graphql import GraphQLError
 
-GC_URL_REGEX = r"([-a-zA-Z0-9@:%._\+~#=]{1,256}\.\b((canada|gc|tbs-sct|goc-gdc|gccollaboration|gccollab)\.\b(ca)|(cdssandbox)\.(xyz))|(canada|tbs-sct|goc-gdc|gccollaboration|gccollab)\.(ca))"
+GC_URL_REGEX = r"([-a-zA-Z0-9@:%._\+~#=]{1,256}\.(ca|org|xyz))"
 
 GC_URL_REGEX_CHECK = compile(GC_URL_REGEX)
 
