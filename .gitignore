@@ -2,7 +2,7 @@
 .vscode
 
 # dotenv environment variables file
-.env
+**/*.env
 
 # Logs
 logs

@@ -18,13 +18,13 @@ steps:
     entrypoint: npm
     args: ['test']
     env:
-      - AZURE_CONN_STRING=""
-      - DATABASE=""
-      - SUMMARIES_CONTAINER=""
-      - API_CONTAINER=""
-      - SUPER_ADMIN_TOKEN=""
-      - TOKEN_HASH=""
-      - DMARC_REPORT_API_TOKEN=""
+      - AZURE_CONN_STRING=$_AZURE_CONN_STRING
+      - DATABASE=$_DATABASE
+      - SUMMARIES_CONTAINER=$_SUMMARIES_CONTAINER
+      - API_CONTAINER=$_API_CONTAINER
+      - SUPER_ADMIN_TOKEN=$_SUPER_ADMIN_TOKEN
+      - TOKEN_HASH=$_TOKEN_HASH
+      - DMARC_REPORT_API_TOKEN=$_DMARC_REPORT_API_TOKEN
       - DMARC_REPORT_API_SECRET=$_DMARC_REPORT_API_SECRET
 
   - name: 'gcr.io/cloud-builders/docker'

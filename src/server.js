@@ -1,5 +1,3 @@
-const { TOKEN_HASH } = process.env
-
 const bcrypt = require('bcrypt')
 const cors = require('cors')
 const express = require('express')
@@ -10,7 +8,7 @@ const { ApolloServer } = require('apollo-server-express')
 
 const { query } = require('./queries')
 
-const { verifyToken } = require('./auth')
+const { checkToken, verifyToken } = require('./auth')
 const { cleanseInput } = require('./validators')
 const {
   loadCategoryTotals,
@@ -41,22 +39,9 @@ const Server = (context = {}) => {
     context: async ({ req, res }) => {
       const { summariesContainer } = context
       const token = req.headers.authorization || ''
-      if (token !== '') {
-        const apiKey = verifyToken({ token }).apiKey
-        if (!bcrypt.compareSync(apiKey, TOKEN_HASH)) {
-          console.warn(
-            'User attempted to access dmarc-report-api with an incorrect auth token.',
-          )
-          throw new Error('Unable to access dmarc-report-api')
-        }
-      } else {
-        console.warn(
-          'User attempted to access dmarc-report-api without auth token.',
-        )
-        throw new Error('Unable to access dmarc-report-api')
-      }
 
       return {
+        checkToken: checkToken(verifyToken, bcrypt, token),
         cleanseInput,
         loadCategoryTotals: loadCategoryTotals({
           container: summariesContainer,

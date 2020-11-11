@@ -21,7 +21,9 @@ const dmarcSummaryByPeriod = {
     },
   },
   type: periodType,
-  resolve: async (_, args, { cleanseInput, moment }) => {
+  resolve: async (_, args, { checkToken, cleanseInput, moment }) => {
+    checkToken()
+
     const month = cleanseInput(args.month)
     const year = cleanseInput(args.year)
     const domain = cleanseInput(args.domain)

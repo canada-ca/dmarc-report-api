@@ -11,7 +11,9 @@ const yearlyDmarcSummaries = {
     },
   },
   type: new GraphQLList(periodType),
-  resolve: async (_, args, { cleanseInput, loadDates, moment }) => {
+  resolve: async (_, args, { checkToken, cleanseInput, loadDates, moment }) => {
+    checkToken()
+
     const domain = cleanseInput(args.domain)
     const startDateStr = moment()
       .startOf('month')

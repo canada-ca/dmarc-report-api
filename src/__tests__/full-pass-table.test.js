@@ -1,7 +1,3 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { GraphQLSchema, graphql } = require('graphql')
 const { query } = require('../queries')
 
@@ -12,13 +8,14 @@ const { cleanseInput } = require('../validators')
 const { loadFullPassConnection } = require('../loaders')
 
 describe('given fullPassTableObject', () => {
-  let schema, cosmosMockedReturn
+  let schema, cosmosMockedReturn, checkToken
 
   beforeAll(async () => {
     // Create GQL schema
     schema = new GraphQLSchema({
       query,
     })
+    checkToken = jest.fn()
   })
 
   beforeEach(async () => {
@@ -84,6 +81,7 @@ describe('given fullPassTableObject', () => {
             container,
             cleanseInput,
           }),
+          checkToken,
         },
       )
 

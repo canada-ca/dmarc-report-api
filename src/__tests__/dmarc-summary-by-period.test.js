@@ -1,14 +1,10 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { GraphQLSchema, graphql, GraphQLError } = require('graphql')
 const { query } = require('../queries')
 
 const { cleanseInput } = require('../validators')
 
 describe('given dmarcSummaryByPeriod', () => {
-  let schema
+  let schema, checkToken
   const consoleOutput = []
   const mockedWarn = (output) => consoleOutput.push(output)
 
@@ -18,6 +14,7 @@ describe('given dmarcSummaryByPeriod', () => {
       query,
     })
     console.warn = mockedWarn
+    checkToken = jest.fn()
   })
 
   beforeEach(() => {
@@ -99,6 +96,7 @@ describe('given dmarcSummaryByPeriod', () => {
         {
           cleanseInput,
           moment,
+          checkToken,
         },
       )
 
@@ -153,6 +151,7 @@ describe('given dmarcSummaryByPeriod', () => {
         {
           cleanseInput,
           moment,
+          checkToken,
         },
       )
       const expectedResponse = {
@@ -242,6 +241,7 @@ describe('given dmarcSummaryByPeriod', () => {
           {
             cleanseInput,
             moment,
+            checkToken,
           },
         )
 
@@ -296,6 +296,7 @@ describe('given dmarcSummaryByPeriod', () => {
           {
             cleanseInput,
             moment,
+            checkToken,
           },
         )
 

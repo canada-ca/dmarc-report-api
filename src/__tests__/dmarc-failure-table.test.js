@@ -1,7 +1,3 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { GraphQLSchema, graphql } = require('graphql')
 const { query } = require('../queries')
 
@@ -12,13 +8,14 @@ const { cleanseInput } = require('../validators')
 const { loadDmarcFailConnection } = require('../loaders')
 
 describe('given dmarcFailureTableObject', () => {
-  let schema, cosmosMockedReturn
+  let schema, cosmosMockedReturn, checkToken
 
   beforeAll(async () => {
     // Create GQL schema
     schema = new GraphQLSchema({
       query,
     })
+    checkToken = jest.fn()
   })
 
   beforeEach(async () => {
@@ -85,6 +82,7 @@ describe('given dmarcFailureTableObject', () => {
             container,
             cleanseInput,
           }),
+          checkToken,
         },
       )
 

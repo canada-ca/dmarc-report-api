@@ -1,7 +1,3 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { DMARC_REPORT_API_SECRET } = process.env
 
 const jwt = require('jsonwebtoken')

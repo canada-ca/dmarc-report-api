@@ -1,7 +1,3 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { GraphQLSchema, graphql } = require('graphql')
 const { query } = require('../queries')
 
@@ -10,13 +6,14 @@ const moment = require('moment')
 const { loadCategoryTotals } = require('../loaders')
 
 describe('given categoryTotals object', () => {
-  let schema
+  let schema, checkToken
 
   beforeAll(async () => {
     // Create GQL schema
     schema = new GraphQLSchema({
       query,
     })
+    checkToken = jest.fn()
   })
 
   describe('all fields can be queried', () => {
@@ -63,6 +60,7 @@ describe('given categoryTotals object', () => {
         {
           cleanseInput,
           moment,
+          checkToken,
           loadCategoryTotals: loadCategoryTotals({ container }),
         },
       )

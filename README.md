@@ -1,27 +1,85 @@
 ([Français](#api-de-rapport-dmarc))
 
 ## DMARC Report API
-This is a single query GraphQL API allowing us to pull data from an Azure Cosmos Database with [Tracker](https://github.com/canada-ca/tracker)
+The Tracker API is exclusively focused on serving data, rather than HTML. It is a GraphQL API, chosen because of its composability, legibility and for the way it [enables both security and security automation](https://www.youtube.com/watch?v=gqvyCdyp3Nw).
+It is built with the [Express webserver](https://expressjs.com/) using the [apollo-server-express middleware](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express), and follows the [Relay specifications for pagination](https://relay.dev/graphql/connections.htm).
 
-### Running The API
-#### Requirements
-- Python 3.8+
-- Pipenv
+#### Installing Dependencies
 
-#### Setup Pipenv
-```shell script
-pipenv install
+```shell
+npm install
 ```
 
-#### Running the API
-```shell script
-pipenv run server
-```
-You will be able to access the API at http://localhost:5000/graphql
+#### Running API Server
 
-#### Running Tests
-```shell script
-pipenv run test
+In accordance with the [12Factor app](https://12factor.net) philosophy, the server [draws it's config from the environment](https://12factor.net/config). It does based on a `.env` file that should exist in the root of the API folder which can be created with the following command, obviously modifying the test values shown to suit your setup.
+
+```bash
+cat <<'EOF' > test.env
+AZURE_CONN_STRING=connection string
+DATABASE=database
+SUMMARIES_CONTAINER=summaries
+API_CONTAINER=api
+SUPER_ADMIN_TOKEN=sa-token
+
+DMARC_REPORT_API_SECRET=test-secret
+TOKEN_HASH=test-hash
+DMARC_REPORT_API_TOKEN=test-token
+EOF
+```
+With that defined you can start the server with these commands.
+
+```shell
+# Run the server
+npm start
+```
+
+An online IDE will be accessible at [localhost:4001/graphql](http://localhost:4001/graphql) allowing you to explore the API.
+
+### Dev Workflow
+
+#### Install Dev Dependencies
+```shell
+npm install
+```
+
+We need create the environment variables the application needs, but with some test appropriate values. We can do that by creating `test.env` in the API root directory with the following command.
+
+```bash
+cat <<'EOF' > test.env
+AZURE_CONN_STRING=connection string
+DATABASE=database
+SUMMARIES_CONTAINER=summaries
+API_CONTAINER=api
+SUPER_ADMIN_TOKEN=sa-token
+
+DMARC_REPORT_API_SECRET=test-secret
+TOKEN_HASH=test-hash
+DMARC_REPORT_API_TOKEN=test-token
+EOF
+```
+
+Finally, run the tests.
+
+```bash
+npm test
+```
+
+#### Checking Test Coverage
+
+```shell
+npm run test-coverage
+```
+
+#### Running ESLint
+
+```shell
+npm run lint
+```
+
+#### Formatting Code with Prettier
+```shell
+npm run prettier
 ```
 
 ### How to Contribute
@@ -38,27 +96,81 @@ ______________________
 
 ## API de rapport DMARC
 
-Il s'agit d'une API GraphQL à requête unique qui nous permet d'extraire des données d'une base de données Azure Cosmos avec [Tracker](https://github.com/canada-ca/tracker)
+L'API Tracker est exclusivement axée sur la fourniture de données, plutôt que sur le HTML. Il s'agit d'une API GraphQL, choisie pour sa composabilité, sa lisibilité et pour la façon dont elle [permet à la fois la sécurité et l'automatisation de la sécurité](https://www.youtube.com/watch?v=gqvyCdyp3Nw). Elle est construite avec le [serveur web Express](https://expressjs.com/) en utilisant le [middleware apollo-serveur-express](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express), et suit les [spécifications du relais pour la pagination](https://relay.dev/graphql/connections.htm).
 
-### Exécution de l'API
-#### Exigences
-- Python 3.8+
-- Pipenv
+#### Installer des dépendances
 
-#### Configurer Pipenv
-```shell script
-pipenv install
+```shell
+npm install
 ```
 
-#### Exécution de l'API
-```shell script
-pipenv run server
-```
-Vous pourrez accéder à l'API à l'adresse http://localhost:5000/graphql
+#### Exécution du serveur API
 
-#### Exécution de Tests
-```shell script
-pipenv run test
+Conformément à la philosophie de [12Factor app](https://12factor.net), le serveur [tire sa configuration de l'environnement](https://12factor.net/config). Il se base sur un fichier `.env` qui devrait exister à la racine du dossier de l'API et qui peut être créé avec la commande suivante, en modifiant évidemment les valeurs de test affichées pour s'adapter à votre configuration.
+
+```bash
+cat <<'EOF' > test.env
+AZURE_CONN_STRING=connection string
+DATABASE=database
+SUMMARIES_CONTAINER=summaries
+API_CONTAINER=api
+SUPER_ADMIN_TOKEN=sa-token
+
+DMARC_REPORT_API_SECRET=test-secret
+TOKEN_HASH=test-hash
+DMARC_REPORT_API_TOKEN=test-token
+EOF
+```
+Une fois cela défini, vous pouvez démarrer le serveur avec ces commandes.
+```shell
+# Lancer le serveur
+npm start
+```
+Un IDE en ligne sera accessible à [localhost:4001/graphql](http://localhost:4001/graphql) vous permettant d'explorer l'API.
+
+### Flux de travail des développeurs
+
+#### Installer des dépendances de développement
+```shell
+npm install
+```
+
+Nous devons créer les variables d'environnement dont l'application a besoin, mais avec des valeurs appropriées de test. Nous pouvons le faire en créant `test.env` dans le répertoire racine de l'API avec la commande suivante.
+
+```bash
+cat <<'EOF' > test.env
+AZURE_CONN_STRING=connection string
+DATABASE=database
+SUMMARIES_CONTAINER=summaries
+API_CONTAINER=api
+SUPER_ADMIN_TOKEN=sa-token
+
+DMARC_REPORT_API_SECRET=test-secret
+TOKEN_HASH=test-hash
+DMARC_REPORT_API_TOKEN=test-token
+EOF
+```
+Enfin, faites les tests.
+
+```bash
+npm test
+```
+
+#### Vérification de la couverture des tests
+
+```shell
+npm run test-coverage
+```
+
+#### Fonctionnement d'ESLint
+
+```shell
+npm run lint
+```
+
+#### Code de formatage plus joli
+```shell
+npm run prettier
 ```
 
 ### Comment contribuer

@@ -1,7 +1,3 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true,
-})
-
 const { GraphQLSchema, graphql } = require('graphql')
 const { query } = require('../queries')
 
@@ -12,13 +8,14 @@ const { cleanseInput } = require('../validators')
 const { loadSpfFailConnection } = require('../loaders')
 
 describe('given spfFailTableObject', () => {
-  let schema, cosmosMockedReturn
+  let schema, cosmosMockedReturn, checkToken
 
   beforeAll(async () => {
     // Create GQL schema
     schema = new GraphQLSchema({
       query,
     })
+    checkToken = jest.fn()
   })
 
   beforeEach(async () => {
@@ -81,6 +78,7 @@ describe('given spfFailTableObject', () => {
         {
           cleanseInput,
           moment,
+          checkToken,
           loadSpfFailConnection: loadSpfFailConnection({
             container,
             cleanseInput,

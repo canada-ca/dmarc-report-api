@@ -1,7 +1,14 @@
-from python:3.8-alpine
+FROM ubuntu:20.04
 
 # Python, don't write bytecode!
 ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED TRUE
+ENV PIPENV_NOSPIN TRUE
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk add -U --no-cache openssl-dev libffi-dev build-base musl-dev python3 python3-dev
-RUN python3 -m pip install pipenv
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends libssl-dev libffi-dev build-essential postgresql-12 \
+      python3 python3-dev python3-pip nodejs
+RUN pip3 install pipenv
