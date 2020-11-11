@@ -1,0 +1,87 @@
+const { toGlobalId } = require('graphql-relay')
+
+module.exports.firstLimit = {
+  edges: [
+    {
+      cursor: toGlobalId('failDmarc', 1),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 1,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 2),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 2,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 3),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 3,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 4),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 4,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 5),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 5,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+  ],
+  pageInfo: {
+    endCursor: toGlobalId('failDmarc', 5),
+    hasNextPage: true,
+    hasPreviousPage: false,
+    startCursor: toGlobalId('failDmarc', 1),
+  },
+}

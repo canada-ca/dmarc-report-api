@@ -1,0 +1,26 @@
+# Directories
+**/__tests__
+__mocks__
+node_modules
+.github
+.vscode
+.coverage
+
+# JS setup
+.eslintrc
+.prettierrc
+.editorconfig
+
+# Cloud Items
+cloudbuild.yaml
+
+# Docker Items
+Dockerfile
+Dockerfile.dev
+
+# Markdowns
+LICENCE
+README.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+SECURITY.md

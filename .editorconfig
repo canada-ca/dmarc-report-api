@@ -17,7 +17,7 @@ trim_trailing_whitespace = false
 [COMMIT_EDITMSG]
 max_line_length = 0
 
-# 4 space indentation
-[*.py]
+# 2 space indentation
+[*.js]
 indent_style = space
-indent_size = 4
+indent_size = 2

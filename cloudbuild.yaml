@@ -1,29 +1,31 @@
 steps:
-  - name: 'gcr.io/track-compliance/ci'
-    id: install
-    dir: .
-    entrypoint: pipenv
-    args: ['sync', '-d', '--bare']
-    env:
-      - PIPENV_NOSPIN=TRUE
 
-  - name: 'gcr.io/track-compliance/ci'
+  - name: node:alpine
+    id: install
+    dir: api-js
+    entrypoint: npm
+    args: ['ci', '--no-optional']
+
+  - name: node:alpine
+    id: lint
+    dir: api-js
+    entrypoint: npm
+    args: ['run', lint]
+
+  - name: node:alpine
     id: test
-    dir: .
-    entrypoint: pipenv
-    args: ['run', 'test']
+    dir: api-js
+    entrypoint: npm
+    args: ['test']
     env:
-      - AZURE_DOMAIN=$_AZURE_DOMAIN
-      - AZURE_ENDPOINT=$_AZURE_ENDPOINT
-      - AZURE_KEY=$_AZURE_KEY
-      - ACCOUNT=$_ACCOUNT
-      - DATABASE=$_DATABASE
-      - RECORD_CONTAINER=$_RECORD_CONTAINER
-      - SUMMARIES_CONTAINER=$_SUMMARIES_CONTAINER
-      - IP_ENRICHMENT_CONTAINER=$_IP_ENRICHMENT_CONTAINER
-      - SPOOFING_CAMPAIGNS=$_SPOOFING_CAMPAIGNS
-      - TOKEN=$_TOKEN
-      - JWT_SECRET=$_JWT_SECRET
+      - AZURE_CONN_STRING=""
+      - DATABASE=""
+      - SUMMARIES_CONTAINER=""
+      - API_CONTAINER=""
+      - SUPER_ADMIN_TOKEN=""
+      - TOKEN_HASH=""
+      - DMARC_REPORT_API_TOKEN=""
+      - DMARC_REPORT_API_SECRET=$_DMARC_REPORT_API_SECRET
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-if-master
@@ -51,7 +53,7 @@ steps:
       else
         exit 0
       fi
-
+      
   - name: 'gcr.io/cloud-builders/gcloud'
     id: push-to-cloud-run-if-master
     entrypoint: 'bash'

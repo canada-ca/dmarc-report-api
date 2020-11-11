@@ -1,41 +1,24 @@
-FROM ubuntu:20.04
+FROM node:alpine as build-env
+WORKDIR /app
+# Copy in whatever isn't filtered by .dockerignore
+COPY . .
 
-ENV PYTHONUNBUFFERED TRUE
-ENV PIPENV_NOSPIN TRUE
-ENV LC_ALL C.UTF-8
-ENV LANG C.UTF-8
-ENV DEBIAN_FRONTEND noninteractive
+# Install only what's needed for production
+# https://nodesecroadmap.fyi/chapter-1/threat-UIR.html
+RUN npm ci --production
+
+# Base the production image on something slimmer
+FROM node:alpine
+
 ENV HOST 0.0.0.0
+ENV PORT 4000
+ENV NODE_ENV production
 
-RUN set -ex \
-	\
-	&& savedAptMark="$(apt-mark showmanual)" \
-	&& apt-get update && apt-get install -y --no-install-recommends \
-    openssl \
-    libffi-dev \
-    musl-dev \
-    python3.8 \
-    python3-dev \
-    python3-pip \
-    build-essential
+# copy built app in
+COPY --from=build-env /app /app
+WORKDIR /app
 
-RUN addgroup -gid 1000 -system dmarcapi && \
-      adduser -u 1000 -system dmarcapi -gecos dmarcapi
+USER node
+EXPOSE 4000
 
-RUN python3 -m pip install --upgrade setuptools
-RUN python3 -m pip install wheel
-RUN python3 -m pip install pipenv --no-cache-dir
-
-COPY /dmarc_report_api /api/dmarc_report_api
-COPY Pipfile /api
-COPY Pipfile.lock /api
-
-ENV PYTHONPATH "${PYTHONPATH}:/api"
-
-WORKDIR /api
-
-USER dmarcapi
-RUN pipenv sync --bare
-
-EXPOSE 8080
-ENTRYPOINT ["pipenv", "run", "server"]
+CMD ["npm", "start"]

@@ -1,1 +1,0 @@
-from dmarc_report_api.auth.token_wrapper import require_token
