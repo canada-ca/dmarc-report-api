@@ -11,7 +11,7 @@ RUN npm ci --production
 FROM node:alpine
 
 ENV HOST 0.0.0.0
-ENV PORT 4000
+ENV PORT 4001
 ENV NODE_ENV production
 
 # copy built app in
@@ -19,6 +19,6 @@ COPY --from=build-env /app /app
 WORKDIR /app
 
 USER node
-EXPOSE 4000
+EXPOSE 4001
 
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
