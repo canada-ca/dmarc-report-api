@@ -21,10 +21,14 @@ DATABASE=database
 SUMMARIES_CONTAINER=summaries
 API_CONTAINER=api
 SUPER_ADMIN_TOKEN=sa-token
-
 DMARC_REPORT_API_SECRET=test-secret
 TOKEN_HASH=test-hash
 DMARC_REPORT_API_TOKEN=test-token
+DEPTH_LIMIT=2
+COST_LIMIT=100
+SCALAR_COST=1
+OBJECT_COST=1
+LIST_FACTOR=1
 EOF
 ```
 With that defined you can start the server with these commands.
@@ -52,10 +56,14 @@ DATABASE=database
 SUMMARIES_CONTAINER=summaries
 API_CONTAINER=api
 SUPER_ADMIN_TOKEN=sa-token
-
 DMARC_REPORT_API_SECRET=test-secret
 TOKEN_HASH=test-hash
 DMARC_REPORT_API_TOKEN=test-token
+DEPTH_LIMIT=2
+COST_LIMIT=100
+SCALAR_COST=1
+OBJECT_COST=1
+LIST_FACTOR=1
 EOF
 ```
 
@@ -115,10 +123,14 @@ DATABASE=database
 SUMMARIES_CONTAINER=summaries
 API_CONTAINER=api
 SUPER_ADMIN_TOKEN=sa-token
-
 DMARC_REPORT_API_SECRET=test-secret
 TOKEN_HASH=test-hash
 DMARC_REPORT_API_TOKEN=test-token
+DEPTH_LIMIT=2
+COST_LIMIT=100
+SCALAR_COST=1
+OBJECT_COST=1
+LIST_FACTOR=1
 EOF
 ```
 Une fois cela défini, vous pouvez démarrer le serveur avec ces commandes.
@@ -144,10 +156,14 @@ DATABASE=database
 SUMMARIES_CONTAINER=summaries
 API_CONTAINER=api
 SUPER_ADMIN_TOKEN=sa-token
-
 DMARC_REPORT_API_SECRET=test-secret
 TOKEN_HASH=test-hash
 DMARC_REPORT_API_TOKEN=test-token
+DEPTH_LIMIT=2
+COST_LIMIT=100
+SCALAR_COST=1
+OBJECT_COST=1
+LIST_FACTOR=1
 EOF
 ```
 Enfin, faites les tests.

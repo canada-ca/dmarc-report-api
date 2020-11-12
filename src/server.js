@@ -5,6 +5,8 @@ const moment = require('moment')
 const { GraphQLSchema } = require('graphql')
 const { createServer } = require('http')
 const { ApolloServer } = require('apollo-server-express')
+const depthLimit = require('graphql-depth-limit')
+const { createComplexityLimitRule } = require('graphql-validation-complexity')
 
 const { query } = require('./queries')
 
@@ -19,7 +21,35 @@ const {
   loadSpfFailConnection,
 } = require('./loaders')
 
-const Server = (context = {}) => {
+const createValidationRules = (
+  maxDepth,
+  complexityCost,
+  scalarCost,
+  objectCost,
+  listFactor,
+) => {
+  return [
+    depthLimit(maxDepth),
+    createComplexityLimitRule(complexityCost, {
+      scalarCost,
+      objectCost,
+      listFactor,
+      formatErrorMessage: (cost) => {
+        console.warn(`User attempted a costly request: ${cost}`)
+        return `Query error, query is too complex.`
+      },
+    }),
+  ]
+}
+
+const Server = (
+  maxDepth,
+  complexityCost,
+  scalarCost,
+  objectCost,
+  listFactor,
+  context = {},
+) => {
   const app = express()
 
   app.use('*', cors())
@@ -36,6 +66,13 @@ const Server = (context = {}) => {
     schema: new GraphQLSchema({
       query: query,
     }),
+    validationRules: createValidationRules(
+      maxDepth,
+      complexityCost,
+      scalarCost,
+      objectCost,
+      listFactor,
+    ),
     context: async ({ req, res }) => {
       const { summariesContainer } = context
       const token = req.headers.authorization || ''
