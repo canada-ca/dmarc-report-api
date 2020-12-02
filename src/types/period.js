@@ -26,12 +26,12 @@ const periodType = new GraphQLObjectType({
         _,
         { loadCategoryTotals },
       ) => {
-        const categoryTotals = await loadCategoryTotals(
+        const categoryTotals = await loadCategoryTotals({
           startDate,
           endDate,
           domain,
           thirtyDays,
-        )
+        })
         return categoryTotals
       },
     },
