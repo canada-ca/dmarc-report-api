@@ -107,6 +107,7 @@ const Server = (
         ...context,
       }
     },
+    introspection: true,
   })
 
   server.applyMiddleware({ app })

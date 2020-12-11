@@ -1,6 +1,5 @@
 const { DMARC_REPORT_API_TOKEN, DMARC_REPORT_API_SECRET } = process.env
 
-
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const { checkToken, verifyToken } = require('../auth')
@@ -20,7 +19,9 @@ describe('given the checkToken function', () => {
   describe('given a valid token', () => {
     it('does not throw an error', () => {
       const mockedBcrypt = {
-        compareSync() { return jest.fn().mockReturnValue(true) },
+        compareSync() {
+          return jest.fn().mockReturnValue(true)
+        },
       }
       const token = jwt.sign(
         {
