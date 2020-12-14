@@ -6,36 +6,67 @@ const loadCategoryTotals = ({ container }) => async ({
 }) => {
   let dataReturned
 
-  try {
-    const { resources } = await container.items
-      .query({
-        query: `SELECT l.category_totals 
-            FROM c JOIN l IN c.periods 
-            WHERE c.id=@domain 
-            AND l.start_date >= @startDate
-            AND l.end_date <= @endDate
-            AND l.thirty_days = @thirtyDay`,
-        parameters: [
-          { name: '@domain', value: domain },
-          { name: '@startDate', value: startDate },
-          { name: '@endDate', value: endDate },
-          { name: '@thirtyDay', value: thirtyDays },
-        ],
-      })
-      .fetchAll()
+  if (thirtyDays) {
+    try {
+      const { resources } = await container.items
+        .query({
+          query: `SELECT l.category_totals 
+              FROM c JOIN l IN c.periods 
+              WHERE c.id=@domain 
+              AND l.thirty_days = @thirtyDay`,
+          parameters: [
+            { name: '@domain', value: domain },
+            { name: '@thirtyDay', value: thirtyDays },
+          ],
+        })
+        .fetchAll()
 
-    dataReturned = resources
-  } catch (err) {
-    console.error(
-      `Cosmos error occurred while loading category totals for ${domain}, error: ${err}`,
-    )
+      dataReturned = resources
+    } catch (err) {
+      console.error(
+        `Cosmos error occurred while loading category totals for ${domain}, error: ${err}`,
+      )
 
-    // If there is an error return 0's
-    return {
-      passSpfOnly: 0,
-      passDkimOnly: 0,
-      pass: 0,
-      fail: 0,
+      // If there is an error return 0's
+      return {
+        passSpfOnly: 0,
+        passDkimOnly: 0,
+        pass: 0,
+        fail: 0,
+      }
+    }
+  } else {
+    try {
+      const { resources } = await container.items
+        .query({
+          query: `SELECT l.category_totals 
+              FROM c JOIN l IN c.periods 
+              WHERE c.id=@domain 
+              AND l.start_date >= @startDate
+              AND l.end_date <= @endDate
+              AND l.thirty_days = @thirtyDay`,
+          parameters: [
+            { name: '@domain', value: domain },
+            { name: '@startDate', value: startDate },
+            { name: '@endDate', value: endDate },
+            { name: '@thirtyDay', value: thirtyDays },
+          ],
+        })
+        .fetchAll()
+
+      dataReturned = resources
+    } catch (err) {
+      console.error(
+        `Cosmos error occurred while loading category totals for ${domain}, error: ${err}`,
+      )
+
+      // If there is an error return 0's
+      return {
+        passSpfOnly: 0,
+        passDkimOnly: 0,
+        pass: 0,
+        fail: 0,
+      }
     }
   }
 

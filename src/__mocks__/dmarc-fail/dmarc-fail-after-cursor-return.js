@@ -81,7 +81,7 @@ module.exports.afterCursor = {
   pageInfo: {
     endCursor: toGlobalId('failDmarc', 20),
     hasNextPage: false,
-    hasPreviousPage: false,
+    hasPreviousPage: true,
     startCursor: toGlobalId('failDmarc', 16),
   },
 }

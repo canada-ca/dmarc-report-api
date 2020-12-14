@@ -1,10 +1,6 @@
 const { nodeDefinitions } = require('graphql-relay')
 
-const registeredTypes = {}
-
-const { nodeField, nodeInterface } = nodeDefinitions((object) => {
-  return registeredTypes[object.constructor.name] || null
-})
+const { nodeField, nodeInterface } = nodeDefinitions()
 
 module.exports = {
   nodeField,

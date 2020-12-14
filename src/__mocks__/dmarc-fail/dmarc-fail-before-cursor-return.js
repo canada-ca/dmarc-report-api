@@ -3,7 +3,7 @@ const { toGlobalId } = require('graphql-relay')
 module.exports.beforeCursor = {
   edges: [
     {
-      cursor: toGlobalId('failDmarc', 1),
+      cursor: toGlobalId('failDmarc', 5),
       node: {
         disposition: 'none',
         dkimDomains: '',
@@ -11,37 +11,7 @@ module.exports.beforeCursor = {
         dnsHost: 'test.dns.gc.ca',
         envelopeFrom: 'test.domain.canada.ca',
         headerFrom: 'test.domain.canada.ca',
-        id: 1,
-        sourceIpAddress: '123.456.78.91',
-        spfDomains: 'test.domain.gc.ca',
-        totalMessages: 30,
-      },
-    },
-    {
-      cursor: toGlobalId('failDmarc', 2),
-      node: {
-        disposition: 'none',
-        dkimDomains: '',
-        dkimSelectors: '',
-        dnsHost: 'test.dns.gc.ca',
-        envelopeFrom: 'test.domain.canada.ca',
-        headerFrom: 'test.domain.canada.ca',
-        id: 2,
-        sourceIpAddress: '123.456.78.91',
-        spfDomains: 'test.domain.gc.ca',
-        totalMessages: 30,
-      },
-    },
-    {
-      cursor: toGlobalId('failDmarc', 3),
-      node: {
-        disposition: 'none',
-        dkimDomains: '',
-        dkimSelectors: '',
-        dnsHost: 'test.dns.gc.ca',
-        envelopeFrom: 'test.domain.canada.ca',
-        headerFrom: 'test.domain.canada.ca',
-        id: 3,
+        id: 5,
         sourceIpAddress: '123.456.78.91',
         spfDomains: 'test.domain.gc.ca',
         totalMessages: 30,
@@ -63,7 +33,7 @@ module.exports.beforeCursor = {
       },
     },
     {
-      cursor: toGlobalId('failDmarc', 5),
+      cursor: toGlobalId('failDmarc', 3),
       node: {
         disposition: 'none',
         dkimDomains: '',
@@ -71,7 +41,37 @@ module.exports.beforeCursor = {
         dnsHost: 'test.dns.gc.ca',
         envelopeFrom: 'test.domain.canada.ca',
         headerFrom: 'test.domain.canada.ca',
-        id: 5,
+        id: 3,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 2),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 2,
+        sourceIpAddress: '123.456.78.91',
+        spfDomains: 'test.domain.gc.ca',
+        totalMessages: 30,
+      },
+    },
+    {
+      cursor: toGlobalId('failDmarc', 1),
+      node: {
+        disposition: 'none',
+        dkimDomains: '',
+        dkimSelectors: '',
+        dnsHost: 'test.dns.gc.ca',
+        envelopeFrom: 'test.domain.canada.ca',
+        headerFrom: 'test.domain.canada.ca',
+        id: 1,
         sourceIpAddress: '123.456.78.91',
         spfDomains: 'test.domain.gc.ca',
         totalMessages: 30,
@@ -79,9 +79,9 @@ module.exports.beforeCursor = {
     },
   ],
   pageInfo: {
-    endCursor: toGlobalId('failDmarc', 5),
+    endCursor: toGlobalId('failDmarc', 1),
     hasNextPage: false,
-    hasPreviousPage: false,
-    startCursor: toGlobalId('failDmarc', 1),
+    hasPreviousPage: true,
+    startCursor: toGlobalId('failDmarc', 5),
   },
 }

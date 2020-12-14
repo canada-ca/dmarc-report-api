@@ -80,8 +80,8 @@ module.exports.lastLimit = {
   ],
   pageInfo: {
     endCursor: toGlobalId('failDmarc', 16),
-    hasNextPage: false,
-    hasPreviousPage: true,
+    hasNextPage: true,
+    hasPreviousPage: false,
     startCursor: toGlobalId('failDmarc', 20),
   },
 }

@@ -94,7 +94,7 @@ module.exports.afterCursor = {
   pageInfo: {
     endCursor: 'c3BmRmFpbDoyMA==',
     hasNextPage: false,
-    hasPreviousPage: false,
+    hasPreviousPage: true,
     startCursor: 'c3BmRmFpbDoxNQ==',
   },
 }

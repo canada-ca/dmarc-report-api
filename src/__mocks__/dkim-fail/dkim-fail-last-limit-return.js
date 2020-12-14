@@ -83,8 +83,8 @@ module.exports.lastLimit = {
   ],
   pageInfo: {
     endCursor: 'ZmFpbERraW06MTY=',
-    hasNextPage: false,
-    hasPreviousPage: true,
+    hasNextPage: true,
+    hasPreviousPage: false,
     startCursor: 'ZmFpbERraW06MjA=',
   },
 }

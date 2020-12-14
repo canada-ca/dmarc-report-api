@@ -244,7 +244,7 @@ module.exports.afterCursor = {
   pageInfo: {
     endCursor: 'ZmFpbERraW06MjA=',
     hasNextPage: false,
-    hasPreviousPage: false,
+    hasPreviousPage: true,
     startCursor: 'ZmFpbERraW06Ng==',
   },
 }
