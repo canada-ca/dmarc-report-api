@@ -91,9 +91,9 @@ const dmarcSummaryByPeriod = {
       const startDate = moment().subtract(30, 'days')
       const endDate = moment()
 
-      if (year !== String(startDate.year())) {
+      if (year !== String(startDate.year()) && year !== String(endDate.year()) ) {
         console.warn(
-          `Can only have current year set with last 30 days, current year: ${startDate.year()}, submitted year: ${year}`,
+          `Can only have current year set with last 30 days, current year startDate year: ${startDate.year()} or endDate year: ${endDate.year()}, submitted year: ${year}`,
         )
         throw new Error(
           'Unable to have year set to any other, other than current year.',

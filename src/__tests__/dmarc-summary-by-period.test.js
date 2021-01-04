@@ -276,6 +276,9 @@ describe('given dmarcSummaryByPeriod', () => {
             format() {
               return '2020-01-30'
             },
+            year() {
+              return '2020'
+            },
           })
 
         const response = await graphql(
@@ -307,7 +310,7 @@ describe('given dmarcSummaryByPeriod', () => {
         ]
         expect(response.errors).toEqual(error)
         expect(consoleOutput).toEqual([
-          'Can only have current year set with last 30 days, current year: 2020, submitted year: 2018',
+          'Can only have current year set with last 30 days, current year startDate year: 2020 or endDate year: 2020, submitted year: 2018',
         ])
       })
     })
