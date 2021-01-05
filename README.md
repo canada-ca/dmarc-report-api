@@ -1,7 +1,7 @@
 ([Français](#api-de-rapport-dmarc))
 
 ## DMARC Report API
-The Tracker API is exclusively focused on serving data, rather than HTML. It is a GraphQL API, chosen because of its composability, legibility and for the way it [enables both security and security automation](https://www.youtube.com/watch?v=gqvyCdyp3Nw).
+The DMARC Report API is exclusively focused on serving data, rather than HTML. It is a GraphQL API, chosen because of its composability, legibility and for the way it [enables both security and security automation](https://www.youtube.com/watch?v=gqvyCdyp3Nw).
 It is built with the [Express webserver](https://expressjs.com/) using the [apollo-server-express middleware](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express), and follows the [Relay specifications for pagination](https://relay.dev/graphql/connections.htm).
 
 #### Installing Dependencies
@@ -104,7 +104,7 @@ ______________________
 
 ## API de rapport DMARC
 
-L'API Tracker est exclusivement axée sur la fourniture de données, plutôt que sur le HTML. Il s'agit d'une API GraphQL, choisie pour sa composabilité, sa lisibilité et pour la façon dont elle [permet à la fois la sécurité et l'automatisation de la sécurité](https://www.youtube.com/watch?v=gqvyCdyp3Nw). Elle est construite avec le [serveur web Express](https://expressjs.com/) en utilisant le [middleware apollo-serveur-express](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express), et suit les [spécifications du relais pour la pagination](https://relay.dev/graphql/connections.htm).
+L'API du rapport DMARC est exclusivement axée sur le service des données, plutôt que sur le HTML. Il s'agit d'une API GraphQL, choisie pour sa composabilité, sa lisibilité et pour la façon dont elle [permet à la fois la sécurité et l'automatisation de la sécurité](https://www.youtube.com/watch?v=gqvyCdyp3Nw). Elle est construite avec le [serveur web Express](https://expressjs.com/) en utilisant le [middleware apollo-serveur-express](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express), et suit les [spécifications du relais pour la pagination](https://relay.dev/graphql/connections.htm).
 
 #### Installer des dépendances
 
