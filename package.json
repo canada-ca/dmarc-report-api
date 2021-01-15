@@ -23,7 +23,7 @@
   "homepage": "https://github.com/canada-ca/dmarc-report-api#readme",
   "dependencies": {
     "@azure/cosmos": "^3.9.3",
-    "apollo-server-express": "^2.19.1",
+    "apollo-server-express": "^2.19.2",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
     "dataloader": "^2.0.0",
