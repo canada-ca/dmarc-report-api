@@ -44,7 +44,7 @@
     "validator": "^13.5.2"
   },
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
